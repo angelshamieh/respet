@@ -1,0 +1,2 @@
+class AnimalStatus < ApplicationRecord
+end
