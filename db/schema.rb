@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_23_121146) do
+ActiveRecord::Schema.define(version: 2020_02_23_122937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "animal_statuses", force: :cascade do |t|
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animals", force: :cascade do |t|
+    t.bigint "animal_type_id"
+    t.bigint "animal_status_id"
+    t.string "title"
+    t.string "breed"
+    t.string "location"
+    t.integer "age"
+    t.string "gender"
+    t.text "description"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["animal_status_id"], name: "index_animals_on_animal_status_id"
+    t.index ["animal_type_id"], name: "index_animals_on_animal_type_id"
+    t.index ["user_id"], name: "index_animals_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,4 +59,7 @@ ActiveRecord::Schema.define(version: 2020_02_23_121146) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "animals", "animal_statuses"
+  add_foreign_key "animals", "animal_types"
+  add_foreign_key "animals", "users"
 end
