@@ -1,7 +1,7 @@
 
 <div>
-  <%= link_to "Lost", animals_path(@status == 'lost'), class: 'button' %>
-  <%= link_to "Found", animals_path(@status == 'found'), class: 'button' %>
+  <%= link_to "Lost", animals_path(status: 'lost'), class: 'button' %>
+  <%= link_to "Found", animals_path(status: 'found'), class: 'button' %>
 </div>
 
 <!-- # search bar -->
