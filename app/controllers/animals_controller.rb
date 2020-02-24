@@ -16,8 +16,9 @@ class AnimalsController < ApplicationController
 
 
   def show
-    @animal_type = AnimalType.find(@animal.animal_type_id).name
-    @animal_status = AnimalStatus.find(@animal.animal_status_id).status
+    @animal_type = @animal.animal_type.name
+    # @animal_status = AnimalStatus.find(@animal.animal_status_id).status
+    @animal_status = @animal.animal_status.status
   end
 
   def new

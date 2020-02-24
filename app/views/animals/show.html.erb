@@ -1,22 +1,17 @@
 <!-- carousel ofimages -->
 <div class="animal-name">
   <h1><%= @animal.title %></h1>
-  <div class="animal-info">
-    <div><i class="fas fa-map-marker-alt"> </i> <%= @animal.location %></div>
-      <% if @animal_type == 'dog' %>
-        <div><%= image_tag "dog.svg"%> <%= @animal_type %></div>
-      <% elsif @animal_type == 'rabbit' %>
-        <div><%= image_tag "rabbit.svg"%> <%= @animal_type %></div>
-      <% elsif @animal_type == 'cat' %>
-        <div><%= image_tag "khao-manee-cat.svg"%> <%= @animal_type %></div>
-      <% elsif @animal_type == 'bird' %>
-        <div><%= image_tag "bird.svg"%> <%= @animal_type %></div>
-      <% end %>
-      <% if @animal.gender == 'female' %>
-        <div><%= image_tag "woman.svg"%> <%= @animal.gender %></div>
-      <% elsif @animal.gender == 'male' %>
-        <div><%= image_tag "male.svg"%> <%= @animal.gender %></div>
-      <% end %>
-    <%= @animal_status.upcase %>
-  </div>
+</div>
+<% if @animal_status == 'adopt'  %>
+  <div><%= @animal.breed %>, <%= @animal.gender %></div>
+<% end %>
+<div class="animal-info">
+  <div><i class="fas fa-map-marker-alt"> </i> <%= @animal.location %></div>
+  <%= render "animal_type_icon", animal_type: @animal_type %>
+  <%= render "animal_gender_icon", gender: @animal.gender %>
+    <% if @animal_status == 'lost' || @animal_status == 'found' %>
+      <%= @animal_status.upcase  %>
+    <% elsif @animal_status == 'adopt' %>
+
+    <% end %>
 </div>
