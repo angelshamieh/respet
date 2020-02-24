@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :animals, except: :destroy
 
-  
+
   get 'dashboard', to: 'dashboard#profile', as: :dashboard
   get 'settings', to: 'dashboard#settings', as: :settings
+
+  patch 'update_user', to: 'dashboard#update', as: :update_settings
 
 end
