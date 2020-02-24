@@ -23,7 +23,8 @@ puts "creating animal statuses.."
 lost = AnimalStatus.create!(status: "lost")
 found = AnimalStatus.create!(status: "found")
 adopt = AnimalStatus.create!(status: "adopt")
-homed = AnimalStatus.create!(status: "homed")
+homed = AnimalStatus.create!(status: "reunited")
+homed = AnimalStatus.create!(status: "adopted")
 
 puts "creating animals..."
 
