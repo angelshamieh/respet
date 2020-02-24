@@ -10,13 +10,12 @@
   </div>
 </div>
 
-
 <div class="user-post-count">
   <h2><%= @user.animals.size %></h2>
   <p><%= "post".pluralize @user.animals.size %></p>
 </div>
 <div class="user-posts">
-  <h1>My Posts</h1>
+  <h1><strong>My Posts</strong></h1>
   <div class="user-animal-cards">
     <% @user.animals.each do |animal| %>
       <div class="user-animal-card">
@@ -26,6 +25,9 @@
           <%= link_to edit_animal_path(animal) do %>
             <i class="fas fa-pencil-alt"></i>
           <% end %>
+        </div>
+        <div class="animal-status">
+          <%= AnimalStatus.find(animal.animal_status_id).status%>
         </div>
       </div>
     <% end %>
