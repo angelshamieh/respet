@@ -10,7 +10,9 @@
 // .navbar-lewagon .navbar-brand img {
 //   width: 40px;
 // }
-
+body {
+  background-color: white;
+}
 
 .absolute-0-0 {
   width: 100%;
@@ -50,4 +52,12 @@
   img {
     height: 56px;
   }
+}
+
+#page-container {
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 76px;    /* Footer height */
 }

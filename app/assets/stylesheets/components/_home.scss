@@ -1,17 +1,9 @@
-#page-container {
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 76px;    /* Footer height */
-}
-
 #home-page-banner {
   width: 100%;
 }
 
 .home-page {
-  background-color: white;
+
 }
 
 .stats {
@@ -35,3 +27,52 @@
   padding-left: 16px;
 }
 
+.pet-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+
+  h3 {
+    font-size: 22px;
+    img {
+      width: 22px;
+    }
+  }
+
+  a {
+    font-size: 12px;
+    color: #767575;
+    margin: 0;
+    text-align: right;
+  }
+
+}
+
+.home-pet-cards {
+  display: flex;
+  overflow-x: auto;
+}
+
+.home-pet-card {
+  border: 1px solid #FAD00D;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  padding: 12px;
+  border-radius: 16px;
+  width: 180px;
+  height: 250px;
+
+  .animal-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .animal-location {
+    font-size: 12px;
+    color: #767575;
+  }
+
+  p {
+    margin: 0;
+  }
+}
