@@ -1,3 +1,14 @@
 <div class="home-page">
   <%= image_tag "home-page-banner.png", id: "home-page-banner" %>
+
+  <div class="stats">
+    <div class="stats-number">
+      <%= Animal.where("animal_status = 'adopted'").count %>
+      <%= Animal.where("animal_status = 'reunited'").count %>
+    </div>
+    <div class="stats-title">
+      <p>Adoptions</p>
+      <p>Pets Found</p>
+    </div>
+  </div>
 </div>
