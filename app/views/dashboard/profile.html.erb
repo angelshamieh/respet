@@ -1,12 +1,19 @@
-<div class="navigation-icons">
-  <!-- link to settings -->
+<div class="curved-yellow-banner">
+  <div class="settings-icon">
+    <%= link_to settings_path do%>
+      <i class="fas fa-cog"></i>
+    <% end %>
+  </div>
+  <!-- user profile image -->
+  <div class="user-name">
+    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  </div>
 </div>
-<!-- user profile image -->
-<div class="user-details">
-  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-</div>
-<div class="user-post-details">
-  <h2><%= pluralize @user.animals.size, "post" %></h2>
+
+
+<div class="user-post-count">
+  <h2><%= @user.animals.size %></h2>
+  <p><%= "post".pluralize @user.animals.size %></p>
 </div>
 <div class="user-posts">
   <h1>My Posts</h1>
