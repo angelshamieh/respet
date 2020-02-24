@@ -4,16 +4,16 @@ class AnimalsController < ApplicationController
 
   def index
     # /animals?status=3
-    # 1. Find the matching Status
-    @status = AnimalStatus.find(params[:status])
-    # 2. Get all animals with the given status
-    @animals = policy_scope(Animal).where(animal_status: @status)
+        # 1. Find the matching Status
+    if !params[:status].nil?
+      @status = params[:status]
+        # 2. Get all animals with the given status
+      @animals = policy_scope(Animal).where(animal_status: @status)
+    else
+      @animals = policy_scope(Animal)
+    end
   end
 
-  # def lost
-  #   @status = AnimalStatus.find(name: 'lost')
-  #   @animals = policy_scope(Animal).where(animal_status: @status)
-  # end
 
   def show
   end

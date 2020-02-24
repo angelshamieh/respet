@@ -1,0 +1,35 @@
+
+<div>
+  <h2>Filter by pet type</h2>
+
+  <button class = 'icon' id='cat'><%= image_tag "khao-manee-cat.svg", alt: "cat", class: 'icon' %></button>
+  <button class = 'icon' id='dog'><%= image_tag "dog.svg", alt: "dog", class: 'icon' %></button>
+  <button class = 'icon' id='bird'><%= image_tag "bird.svg", alt: "bird", class: 'icon' %></button>
+  <button class = 'icon' id='rabbit'><%= image_tag "rabbit.svg", alt: "rabbit", class: 'icon' %></button>
+</div>
+
+<% @animals.each do |animal| %>
+  <div class="card">
+    <%= animal.title %>
+    <%= animal.gender%>
+    <%= animal.age %>
+    <%= animal.location %>
+  </div>
+<%end %>
+
+<!--
+<script>
+const icon = document.querySelectorAll('.icon');
+  icon.forEach (icon => {
+    icon.addEventListener("click", () =>  {
+      if icon.id == cat
+        <%  animals_path %>
+      else if  icon == image_tag "dog.svg"
+
+      else if icon == image_tag "bird.svg"
+
+      else
+
+    });
+});
+</script> -->
