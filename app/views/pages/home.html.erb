@@ -21,9 +21,26 @@
     <% @lost_animals.each do |animal| %>
       <div class="home-pet-card">
         <!-- image -->
-        <p>animal.title</p>
+        <p><%= animal.title %></p>
         <!-- gender -->
-        <p>animal.location</p>
+        <p><%= animal.location %></p>
+        <!-- like -->
+    <% end %>
+    </div>
+  </div>
+
+  <div class="home-pet-cards">
+    <div class="card-header">
+      <h3><%= image_tag "heart.svg", alt: "alttext" %> Find your new best friend</h3>
+      <p>see all</p>
+    </div>
+
+    <% @adopt_animals.each do |animal| %>
+      <div class="home-pet-card">
+        <!-- image -->
+        <p><%= animal.title %></p>
+        <!-- gender -->
+        <p><%= animal.location %></p>
         <!-- like -->
     <% end %>
     </div>
