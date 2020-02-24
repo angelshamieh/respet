@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :messages
+  has_many :animals, dependent: :destroy
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :location, presence: true
+
+  # has_one_attached :avatar
 end

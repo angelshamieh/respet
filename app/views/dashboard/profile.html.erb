@@ -1,0 +1,26 @@
+<div class="navigation-icons">
+  <!-- link to settings -->
+</div>
+<!-- user profile image -->
+<div class="user-details">
+  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+</div>
+<div class="user-post-details">
+  <h2><%= pluralize @user.animals.size, "post" %></h2>
+</div>
+<div class="user-posts">
+  <h1>My Posts</h1>
+  <div class="user-animal-cards">
+    <% @user.animals.each do |animal| %>
+      <div class="user-animal-card">
+        <!-- animal.image -->
+        <div class="animal-card-info">
+          <%= animal.title %>
+          <%= link_to edit_animal_path(animal) do %>
+            <i class="fas fa-pencil-alt"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
