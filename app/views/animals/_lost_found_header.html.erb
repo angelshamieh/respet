@@ -1,0 +1,28 @@
+
+<div>
+  <%= link_to "Lost", animals_path(@status == 'lost'), class: 'button' %>
+  <%= link_to "Found", animals_path(@status == 'found'), class: 'button' %>
+</div>
+
+<!-- # search bar -->
+<div>
+  <%= form_tag animals_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find an animal"
+    %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+<!-- # add a pet button -->
+<%= link_to "Or, did u lose you pet?", new_animal_path %>
+</div>
+
+<script>
+const button = document.querySelectorAll('.button');
+button.forEach (button => {
+button.addEventListener("click", () =>  {
+button.style.backgroundColor = "black";
+});
+});
+</script>

@@ -1,0 +1,12 @@
+<!-- header -->
+<% if @status == "lost" %>
+  <%= render 'lost_found_header' %>
+<%#= render 'list_with_filters', animal: @animal
+
+<% elsif @status == "adoption"%>
+<% elsif @status == "adoption"%>
+  <%= render 'adoption_header' %>
+<%end %>
+
+<!-- body -->
+<%= render 'list_with_filters' %>

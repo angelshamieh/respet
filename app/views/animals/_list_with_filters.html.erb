@@ -1,0 +1,19 @@
+
+<div>
+  <h2>Filter by pet type</h2>
+
+  <button ><%= image_tag "khao-manee-cat.svg", alt: "cat", class: 'icon' %></button>
+  <button ><%= image_tag "dog.svg", alt: "dog", class: 'icon' %></button>
+  <button ><%= image_tag "bird.svg", alt: "bird", class: 'icon' %></button>
+  <button ><%= image_tag "rabbit.svg", alt: "rabbit", class: 'icon' %></button>
+</div>
+
+<% @animals.each do |animal| %>
+  <div class="card">
+    <%= animal.title %>
+    <%= animal.gender%>
+    <%= animal.age %>
+    <%= animal.location %>
+  </div>
+<%end %>
+
