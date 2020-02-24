@@ -1,3 +1,11 @@
+#page-container {
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 76px;    /* Footer height */
+}
+
 #home-page-banner {
   width: 100%;
 }
@@ -26,3 +34,4 @@
   font-size: 32px;
   padding-left: 16px;
 }
+
