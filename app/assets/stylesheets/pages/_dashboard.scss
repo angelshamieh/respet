@@ -1,0 +1,71 @@
+.curved-yellow-banner {
+  background-color: #FAD00D;
+  height: 200px;
+  width:100%;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+  position: relative;
+}
+
+.user-name h1 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.user-post-count {
+  border-radius: 20px;
+  background-color: white;
+  height: 80px;
+  width: 85%;
+  margin: -80px auto 0 auto;
+  position: relative;
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.settings-icon {
+  position: absolute;
+  right: 6px;
+
+  a {
+    color: black;
+  }
+}
+
+.user-animal-cards {
+  display:flex;
+}
+
+.animal-card-info {
+  display:flex;
+  justify-content: space-between;
+}
+
+.user-animal-card {
+  border-radius: 50px;
+  padding: 16px 37px;
+  box-shadow: 5px 8px 8px -6px grey;
+  border-radius: 15px;
+  margin-right: 16px;
+}
+
+.user-animal-cards {
+  overflow-x: auto;
+}
+
+
+
+
+
+
+
+
+
+
