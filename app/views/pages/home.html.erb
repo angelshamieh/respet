@@ -12,37 +12,38 @@
     </div>
   </div>
 
-  <div class="home-pet-cards">
-    <div class="card-header">
-      <h3><%= image_tag "problem.svg", alt: "alttext" %> Lost PET near you</h3>
-      <p>see all</p>
-    </div>
-
-    <% @lost_animals.each do |animal| %>
-      <div class="home-pet-card">
-        <!-- image -->
-        <p><%= animal.title %></p>
-        <!-- gender -->
-        <p><%= animal.location %></p>
-        <!-- like -->
-    <% end %>
-    </div>
+  <div class="pet-card-header">
+    <h3><%= image_tag "problem.svg", alt: "alttext" %> Lost PET near you</h3>
+    <%= link_to "see all", animals_path(status: :lost) %>
   </div>
 
   <div class="home-pet-cards">
-    <div class="card-header">
-      <h3><%= image_tag "heart.svg", alt: "alttext" %> Find your new best friend</h3>
-      <p>see all</p>
-    </div>
+    <% @lost_animals.each do |animal| %>
+      <div class="home-pet-card">
+        <!-- image -->
+        <p class="animal-title"><%= animal.title %></p>
+        <!-- gender -->
+        <p class="animal-location"><i class="fas fa-map-marker-alt"></i> <%= animal.location %></p>
+        <!-- like -->
+        <%= link_to "", animal_path(animal), class: "absolute-0-0" %>
+      </div>
+    <% end %>
+  </div>
 
+  <div class="pet-card-header">
+    <h3><%= image_tag "heart-home.svg", alt: "alttext" %> Find your new best friend</h3>
+    <%= link_to "see all", animals_path(status: :adopt) %>
+  </div>
+
+  <div class="home-pet-cards">
     <% @adopt_animals.each do |animal| %>
       <div class="home-pet-card">
         <!-- image -->
-        <p><%= animal.title %></p>
+        <p class="animal-title"><%= animal.title %></p>
         <!-- gender -->
-        <p><%= animal.location %></p>
+        <p class="animal-location"><i class="fas fa-map-marker-alt"></i> <%= animal.location %></p>
         <!-- like -->
+      </div>
     <% end %>
-    </div>
   </div>
 </div>
