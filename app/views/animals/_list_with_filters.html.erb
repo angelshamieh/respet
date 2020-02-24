@@ -9,7 +9,7 @@
 </div>
 
 <% @animals.each do |animal| %>
-  <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>">
+  <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>" data-animal-gender="<%= animal.gender %>">
     <%= animal.title %>
     <%= animal.gender%>
     <%= animal.age %>
