@@ -7,6 +7,6 @@ class Animal < ApplicationRecord
   validates :location, presence: true
   validates :description, presence: true
 
-  has_many_attached :photos
+  # has_many_attached :photos
 
 end
