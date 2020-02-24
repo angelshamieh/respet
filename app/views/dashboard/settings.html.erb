@@ -1,6 +1,22 @@
+<div class="back-icon">
+  <%= link_to dashboard_path do%>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+</div>
 <!-- profile photo -->
-<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<div class="user-setting-name">
+  <h1><strong><%= @user.first_name %> <%= @user.last_name %></strong></h1>
+</div>
 <div class="user-info">
-  <i class="fas fa-map-marker-alt"></i> <%= @user.location %>
-  <i class="fas fa-envelope-open-text"></i> <%= @user.email %>
+  <div><i class="fas fa-map-marker-alt"> </i> <%= @user.location %></div>
+  <div><i class="fas fa-envelope-open-text"></i> <%= @user.email %></div>
+</div>
+<div class="update-user-info">
+  <%= simple_form_for(@user, url: update_settings_path) do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :location %>
+  <%= f.submit "submit", class: "btn btn-primary" %>
+<% end %>
 </div>
