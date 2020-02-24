@@ -3,12 +3,29 @@
 
   <div class="stats">
     <div class="stats-number">
-      <%= Animal.where("animal_status = 'adopted'").count %>
-      <%= Animal.where("animal_status = 'reunited'").count %>
+      <p><%= Animal.where("animal_status_id = #{@adopted}").count %></p>
+      <p><%= Animal.where("animal_status_id = #{@reunited}").count %></p>
     </div>
     <div class="stats-title">
       <p>Adoptions</p>
       <p>Pets Found</p>
+    </div>
+  </div>
+
+  <div class="home-pet-cards">
+    <div class="card-header">
+      <h3><%= image_tag "problem.svg", alt: "alttext" %> Lost PET near you</h3>
+      <p>see all</p>
+    </div>
+
+    <% @lost_animals.each do |animal| %>
+      <div class="home-pet-card">
+        <!-- image -->
+        <p>animal.title</p>
+        <!-- gender -->
+        <p>animal.location</p>
+        <!-- like -->
+    <% end %>
     </div>
   </div>
 </div>
