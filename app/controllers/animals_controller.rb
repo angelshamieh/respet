@@ -1,17 +1,12 @@
 class AnimalsController < ApplicationController
+  DEFAULT_ANIMAL_STATUS = 'lost'
 
   before_action :set_animal, only: [:show, :edit, :update]
+  before_action :set_animal_status, only: :index
 
   def index
-    # /animals?status=3
-        # 1. Find the matching Status
-    if !params[:status].nil?
-      @status = params[:status]
-        # 2. Get all animals with the given status
-      @animals = policy_scope(Animal).where(animal_status: @status)
-    else
-      @animals = policy_scope(Animal)
-    end
+      # 2. Get all animals with the given status
+    @animals = policy_scope(Animal).where(animal_status: @status)
   end
 
 
@@ -45,15 +40,26 @@ class AnimalsController < ApplicationController
     end
   end
 
-private
+  private
 
-def animal_params
-  params.require(:animal).permit(:animal_type_id, :animal_status_id, :title, :breed, :location, :age, :gender, :description)
+  def animal_params
+    params.require(:animal).permit(:animal_type_id, :animal_status_id, :title, :breed, :location, :age, :gender, :description)
 
   end
 
   def set_animal
     @animal = Animal.find(params[:id])
     authorize @animal
+  end
+
+  def set_animal_status
+    # /animals?status=3
+        # 1. Find the matching Status
+    params[:status] = DEFAULT_ANIMAL_STATUS if params[:status].nil?
+
+    @status = AnimalStatus.find_by(status: params[:status])
+    if @status.nil?
+      @status = AnimalStatus.find_by(status: DEFAULT_ANIMAL_STATUS)
+    end
   end
 end

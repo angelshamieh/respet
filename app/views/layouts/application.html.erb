@@ -7,17 +7,17 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-        <%= javascript_pack_tag 'application' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <div id="page-container">
-      <%= render 'shared/flashes' %>
-      <div id="content-wrap">
-        <%= yield %>
-        <%= javascript_include_tag 'application' %>
-      </div>
-      <%= render 'shared/navbar' %>
+   <div id="page-container">    
+    <%= render 'shared/flashes' %>
+    <div id="content-wrap">
+     <%= yield %>
     </div>
+    <%= render 'shared/navbar' %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+   </div>
   </body>
 </html>

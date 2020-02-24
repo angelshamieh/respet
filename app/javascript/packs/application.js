@@ -1,2 +1,4 @@
 import "bootstrap";
-import { addListener} from "../components/button.js"
+import { initFilter } from "../components/animal-list-filter"
+
+initFilter()
