@@ -1,0 +1,28 @@
+#home-page-banner {
+  width: 100%;
+}
+
+.home-page {
+  background-color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.stats-number {
+  font-size: 32px;
+  font-weight: 600;
+  color: #767575;
+  padding-right: 16px;
+  border-right: 3px solid #FAD00D;
+  text-align: right;
+}
+
+.stats-title {
+  font-size: 32px;
+  padding-left: 16px;
+}
