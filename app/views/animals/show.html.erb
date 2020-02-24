@@ -1,0 +1,29 @@
+<!-- carousel ofimages -->
+<div class="animal-show-details">
+  <div class="animal-name">
+    <h1><%= @animal.title %></h1>
+  </div>
+  <% if @animal_status == 'adopt'  %>
+    <div><%= @animal.breed.capitalize %>, <%= pluralize @animal.age, 'year' %> old </div>
+  <% end %>
+  <div class="animal-info">
+    <div><i class="fas fa-map-marker-alt"> </i> <%= @animal.location %></div>
+    <%= render "animal_type_icon", animal_type: @animal_type %>
+    <%= render "animal_gender_icon", gender: @animal.gender %>
+      <% if @animal_status == 'lost' || @animal_status == 'found' %>
+        <p><%= @animal_status.upcase %></p>
+      <% end %>
+  </div>
+</div>
+<div class="user-show-details">
+  <!-- image -->
+  <p><strong><%= @animal.user.first_name %> <%= @animal.user.last_name %></strong></p>
+  <p class="light-grey-date"><%= @animal.created_at.strftime("%B, %d, %Y") %></p>
+</div>
+<div class="about-animal-text">
+  <p><strong>About</strong></p>
+  <p><%= @animal.description %></p>
+</div>
+<div class="yellow-message-button">
+  Message <%= @animal.user.first_name.capitalize %>
+</div>

@@ -9,4 +9,7 @@ class Animal < ApplicationRecord
 
   # has_many_attached :photos
 
+  def self.search_by_status_status(status)
+    Animal.joins(:animal_status).where('animal_statuses.status = ?', status)
+  end
 end
