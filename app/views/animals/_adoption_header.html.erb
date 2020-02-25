@@ -1,8 +1,19 @@
+<div class="curved-yellow-banner">
+  <h3><strong><u>ADOPT AN ANIMAL <%= image_tag 'login-banner.png', class: 'image-adoption' %></u></strong></h3>
 
-<h3><strong><u>ADOPT AN ANIMAL <%= image_tag 'login-banner.png', class: 'image-adoption' %></u></strong></h3>
-
-<div>
-  <p class="filter-by-pet-header"><strong>Filter by gender</strong></p>
-    <button class="gender-list-button" data-animal-gender='female'> Female</button>
-    <button class="gender-list-button" data-animal-gender='male'>Male</button>
+  <div class='adoption-header'>
+    <p class="filter-by-pet-header"><strong>Filter by gender</strong></p>
+      <button class="lostfound-button" data-animal-gender='female'> Female</button>
+      <button class="lostfound-button" data-animal-gender='male'>Male</button>
+  </div>
 </div>
+
+<script>
+const button = document.querySelectorAll('.lostfound-button');
+  button.forEach (button => {
+    button.addEventListener("click", () =>  {
+    button.style.backgroundColor = "black";
+    button.style.color = "white";
+    });
+});
+</script>

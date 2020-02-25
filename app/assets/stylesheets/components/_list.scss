@@ -7,7 +7,8 @@
 .lost-found-button{
   display: flex;
   justify-content: center;
-  text-decoration: none;
+  background-color: white;
+  border-radius: 16px;
 
 }
 
@@ -52,14 +53,29 @@ h2 {
 }
 
 .info-animal-card{
-  margin-left: 20px;
+  margin-left: 60px;
+
 }
 
 .image-adoption{
   width:50px;
 }
 
-h3 {
+.curved-yellow-banner {
+
+  h3 {
   text-align: center;
   font-size:25px;
+  }
 }
+
+.first-list-card {
+  display: flex;
+  justify-content:space-between;
+}
+
+.adoption-header {
+  margin-left: 30px;
+  padding:8px;
+}
+

@@ -6,11 +6,12 @@
   <%= f.association :animal_type %>
   <%= f.input :title %>
   <%= f.input :breed %>
-  <%= f.input :age %>
-  <%= f.input :gender %>
+  <%= f.input :age%>
+  <%= f.input :gender, collection: %w[male female] %>
   <%= f.input :location %>
   <%= f.input :description %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Submit", class: "btn btn-primary " %>
 <% end %>
 </div>
+
