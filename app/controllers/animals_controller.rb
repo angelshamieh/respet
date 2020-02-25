@@ -23,6 +23,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
+    @animal.animal_status = AnimalStatus.find_by status: params[:status]
     @animal.user = current_user
     authorize @animal
     if @animal.save
@@ -46,8 +47,7 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:animal_type_id, :animal_status_id, :title, :breed, :location, :age, :gender, :description)
-
+    params.require(:animal).permit(:animal_type_id, :animal_status_id, :title, :breed, :location, :age, :gender, :description, photos: [])
   end
 
   def set_animal
