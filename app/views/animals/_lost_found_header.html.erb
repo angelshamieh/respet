@@ -15,7 +15,11 @@
   <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 <!-- # add a pet button -->
-<%= link_to "Or, did u lose you pet?", new_animal_path %>
+<% if params[:status] == 'lost' %>
+  <%= link_to "Or, did you lose your pet?", new_animal_path(status: 'lost') %>
+  <% else %>
+    <%= link_to "Or, did you find a pet?", new_animal_path(status: 'found') %>
+<% end %>
 </div>
 
 <script>

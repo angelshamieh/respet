@@ -7,7 +7,7 @@ class Animal < ApplicationRecord
   validates :location, presence: true
   validates :description, presence: true
 
-  # has_many_attached :photos
+  has_many_attached :photos
 
   def self.search_by_status_status(status)
     Animal.joins(:animal_status).where('animal_statuses.status = ?', status)
