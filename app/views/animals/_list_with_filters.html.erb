@@ -14,15 +14,20 @@
   <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>" data-animal-gender="<%= animal.gender %>">
     <div class="animal-card">
       <div class="image-wrap">
-        <%= image_tag "logo.png", class: "photo-animal-card" %>
+        <% if animal.photos.attached? %>
+          <%= cl_image_tag animal.photos.first.key, class: "photo-animal-card" %>
+        <% else %>
+          <%= image_tag "logo.png", class: "photo-animal-card" %>
+        <% end %>
       </div>
       <div class="card-info-wrap">
         <div class="animal-contact">
-          <p><%= animal.title %></p>
+          <p><strong><%= animal.title %></strong></p>
           <p><%= animal.age %></p>
+          <p><%= animal.breed %></p>
         </div>
         <div class="animal-location">
-         <p><%= animal.location %></p>
+         <p class='animal-location-padding'><i class="fas fa-map-marker-alt"></i> <%= animal.location.capitalize %></p>
         </div>
       </div>
     </div>

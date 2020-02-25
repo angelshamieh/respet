@@ -1,38 +1,36 @@
 
 <div class="curved-yellow-banner">
-  <h2 class="search-h2"> <strong>Search for pet that have been..</strong></h2>
+  <div class="search-title">
+    <h2> <strong>Search for pet that have been..</strong></h2>
+  </div>
   <div class="lost-found-button">
-    <%= link_to "Lost", animals_path(status: 'lost'), class: 'lostfound-button' %>
-    <%= link_to "Found", animals_path(status: 'found'), class: 'lostfound-button' %>
+    <% lost_button_class = 'list-button' + (params[:status] == 'lost' ? ' active' : '') %>
+    <% found_button_class = 'list-button' + (params[:status] == 'found' ? ' active' : '') %>
+   <strong><%= link_to "Lost", animals_path(status: 'lost'), class: lost_button_class %></strong>
+   <strong><%= link_to "Found", animals_path(status: 'found'), class: found_button_class %></strong>
   </div>
 
 
 <!-- # search bar -->
   <div class="search-form-inline">
-    <%= form_tag animals_path, method: :get do %>
+    <%= form_tag animals_path, method: :get, class: 'form-inline' do %>
+    <div class="input-group">
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find an animal"
+        placeholder: "Search for a pet.."
       %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+      <div class="input-group-append">
+        <% submit_tag "Search", class: "btn btn-primary search-button" %>
+        <i class="fas fa-search search-button-icon"></i>
+      </div>
+    </div>
     <% end %>
 <!-- # add a pet button -->
 <% if params[:status] == 'lost' %>
-  <%= link_to "Or, did you lose your pet?", new_animal_path(status: 'lost') %>
+    <p><%= link_to "Or, did you lose your pet?", new_animal_path(status: 'lost'), class: 'add-button' %></p>
   <% else %>
-    <%= link_to "Or, did you find a pet?", new_animal_path(status: 'found') %>
+    <p><%= link_to "Or, did you find a pet?", new_animal_path(status: 'found'), class: 'add-button' %></p>
 <% end %>
 
 </div>
-
-<script>
-const button = document.querySelectorAll('.lostfound-button');
-  button.forEach (button => {
-    button.addEventListener("click", () =>  {
-    button.style.backgroundColor = "black";
-    button.style.color = "white";
-
-    });
-});
-</script>

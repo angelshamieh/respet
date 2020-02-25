@@ -1,26 +1,9 @@
 .curved-yellow-banner h2 {
   font-size:16px;
   padding: 12px 8px 8px 8px;
-  text-align: center;
 }
 
-.lost-found-button{
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border-radius: 16px;
 
-}
-
-.add-button{
-  text-align: right;
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 12px;
-  margin-left: 8px;
-}
 
 .icon{
   height: 50px;
@@ -34,11 +17,6 @@ h2 {
   justify-content: center;
 }
 
-.card-animal-list {
-  margin-left: 12px;
-  display:flex;
-  border: 1px solid #ccc;
-}
 
 .animal-title-card {
   font-size: 16px;
@@ -48,11 +26,6 @@ h2 {
 
 .title-animal-card{
   font-size:24px;
-}
-
-.info-animal-card{
-  margin-left: 60px;
-
 }
 
 .image-adoption{
@@ -67,20 +40,6 @@ h2 {
   }
 }
 
-.first-list-card {
-  display: flex;
-  justify-content:space-between;
-}
-
-.adoption-header {
-  margin-left: 30px;
-  padding:8px;
-}
-
-
-
-
-
 
 
 // changes
@@ -90,23 +49,25 @@ h2 {
   display: flex;
   border-radius: 16px;
   justify-content: space-between;
-
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px grey;
 }
+
 
 .animal-card{
   height: 160px;
   width: 200px;
   background: #FFFFFF;
   display: flex;
-  justify-content: space-evenly;
 }
 
 
 
 .photo-animal-card {
-  width: 120px;
+  width: 140px;
   height: 180px;
   margin: -10px;
+  border-radius: 16px;
 
 }
 
@@ -114,20 +75,104 @@ h2 {
 
 .card-info-wrap {
   text-align: center;
+  width: 100px;
+  margin-left:20px;
 }
 
 
 
+.list-button{
+  border-radius: 16px;
+  color: black;
+}
+
+.list-button.active {
+  background-color: black;
+  color: white;
+}
 
 
+.card-gender-wrap{
+  width:60px;
+  margin-top: 16px;
+  font-size: 40px;
+
+}
+
+.lost-found-button{
+  display:flex;
+  background-color: white;
+  justify-content: center;
+  width: 190px;
+  margin-left: 100px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+
+a {
+  text-decoration:none;
+
+  }
 
 
+}
+a.add-button{
+  text-align: right;
+  color: black;
 
+}
 
+.search-form-inline{
+  width:350px;
+  margin-left: 32px;
 
+  input[type=text] {
+    border-radius: 16px !important;
+  }
 
+  .search-button {
+    position: absolute;
+    right: 0;
+    border-radius: 16px;
 
+  }
+}
 
+.adoption-header {
+  margin-left: 30px;
 
+}
 
+.gender-button {
+  display:flex;
+  background-color: white!important;
+  justify-content: center;
+  width: 190px;
+  margin-left: 60px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  height: 35px;
+  width: 180px;
+  padding: 8px;
 
+}
+
+.animal-location{
+  width: 120px;
+}
+
+.animal-contact{
+  width: 120px;
+  margin-bottom: -20px
+}
+
+.search-button-icon{
+  font-size: 32px;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+
+.search-title {
+  h2 {
+    text-align:center;
+  }
+}
