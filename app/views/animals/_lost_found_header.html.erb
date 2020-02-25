@@ -8,7 +8,7 @@
 
 
 <!-- # search bar -->
-  <div class="container">
+  <div class="search-form-inline">
     <%= form_tag animals_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -27,6 +27,8 @@ const button = document.querySelectorAll('.lostfound-button');
   button.forEach (button => {
     button.addEventListener("click", () =>  {
     button.style.backgroundColor = "black";
+    button.style.color = "white";
+
     });
 });
 </script>

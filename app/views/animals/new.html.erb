@@ -2,11 +2,12 @@
 <%= simple_form_for [@animal] do |f| %>
   <%= f.input :title %>
   <%= f.input :breed %>
-  <%= f.input :age %>
-  <%= f.input :gender %>
+  <%= f.input :age%>
+  <%= f.input :gender, collection: %w[male female] %>
   <%= f.input :location %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Submit", class: "btn btn-primary " %>
 <% end %>
 </div>
+

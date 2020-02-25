@@ -15,10 +15,16 @@
   <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>" data-animal-gender="<%= animal.gender %>">
       <%= image_tag "logo.png", class: "photo-animal-card" %>
     <div card="info-animal-card">
-      <p class="title-animal-card"><strong><%= animal.title %></strong></p>
-      <p><%= animal.gender%></p>
+      <div class="first-list-card">
+        <p class="title-animal-card"><strong><%= animal.title %></strong></p>
+        <p><%if animal.gender == 'male'%></p>
+            <i class="fas fa-mars"></i>
+          <%else %>
+            <i class="fas fa-venus"></i>
+          <% end %>
+      </div>
       <p><%= animal.age %></p>
-      <p><%= animal.location %></p>
+      <p><i class="fas fa-map-marker-alt"></i><%= animal.location%></p>
     </div>
   </div>
 <%end %>
