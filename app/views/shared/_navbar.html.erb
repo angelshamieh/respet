@@ -25,7 +25,12 @@
 
   <div class="navbar-icon">
     <%= image_tag "user.svg", alt: "Profile" %>
-    <p>Profile</p>
-    <%= link_to "", dashboard_path, class: "absolute-0-0" %>
+    <% if current_user.nil? %>
+      <p>Log-in</p>
+      <%= link_to "", new_user_session_path ,class: "absolute-0-0" %>
+    <% else %>
+      <p>Profile</p>
+      <%= link_to "", dashboard_path, class: "absolute-0-0" %>
+    <% end %>
   </div>
 </div>
