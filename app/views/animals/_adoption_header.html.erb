@@ -3,17 +3,10 @@
 
   <div class='adoption-header'>
     <p class="filter-by-pet-header"><strong>Filter by gender</strong></p>
-      <button class="lostfound-button" data-animal-gender='female'> Female</button>
-      <button class="lostfound-button" data-animal-gender='male'>Male</button>
+      <div class="gender-button">
+        <button class="list-button" data-animal-gender='female'> Female</button>
+        <button class="list-button" data-animal-gender='male'>Male</button>
+      </div>
   </div>
 </div>
 
-<script>
-const button = document.querySelectorAll('.lostfound-button');
-  button.forEach (button => {
-    button.addEventListener("click", () =>  {
-    button.style.backgroundColor = "black";
-    button.style.color = "white";
-    });
-});
-</script>

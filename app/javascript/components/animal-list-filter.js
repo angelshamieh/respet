@@ -1,5 +1,3 @@
-
-
 const setupEvents = () => {
   document.querySelectorAll('.animal-filter-icon').forEach((button) => {
     const buttonAnimalType = button.dataset.animalType
@@ -25,6 +23,19 @@ const setupEvents = () => {
         }
       })
 
+    })
+  })
+
+
+  document.querySelectorAll('.list-button').forEach((button) => {
+    button.addEventListener("click", () =>  {
+      // Remove 'active' class from other buttons
+      document.querySelectorAll('.list-button').forEach((b) => {
+        b.classList.remove('active')
+      })
+
+      // Add 'active' class to THIS button
+      button.classList.add('active')
     })
   })
 }
