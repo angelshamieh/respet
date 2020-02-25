@@ -10,24 +10,30 @@
   </div>
 </div>
 
-
-<% @animals.each do |animal| %>
+<% @animals.each do |animal|%>
   <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>" data-animal-gender="<%= animal.gender %>">
-      <%= image_tag "logo.png", class: "photo-animal-card" %>
-    <div card="info-animal-card">
-      <div class="first-list-card">
-        <p class="title-animal-card"><strong><%= animal.title %></strong></p>
-        <p><%if animal.gender == 'male'%></p>
-            <i class="fas fa-mars"></i>
-          <%else %>
-            <i class="fas fa-venus"></i>
-          <% end %>
+    <div class="animal-card">
+      <div class="image-wrap">
+        <%= image_tag "logo.png", class: "photo-animal-card" %>
       </div>
-      <p><%= animal.age %></p>
-      <p><i class="fas fa-map-marker-alt"></i><%= animal.location%></p>
+      <div class="card-info-wrap">
+        <div class="animal-contact">
+          <p><%= animal.title %></p>
+          <p><%= animal.age %></p>
+        </div>
+        <div class="animal-location">
+         <p><%= animal.location %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-gender-wrap">
+      <p><%if animal.gender == 'male'%></p>
+          <i class="fas fa-mars"></i>
+        <%else %>
+          <i class="fas fa-venus"></i>
+        <% end %>
     </div>
   </div>
-<%end %>
-
+<% end %>
 
 
