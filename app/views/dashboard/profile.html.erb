@@ -20,7 +20,9 @@
   <div class="user-animal-cards">
     <% @user.animals.each do |animal| %>
       <div class="user-animal-card">
-        <%= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill %>
+        <%= link_to animal_path(animal) do %>
+        <%= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
+        <% end %>
       <div class="animal-card-info">
         <%= animal.title.capitalize %>
         <%= link_to edit_animal_path(animal) do %>
