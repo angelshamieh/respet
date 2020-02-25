@@ -44,9 +44,7 @@ h2 {
   font-size: 16px;
 }
 
-.photo-animal-card {
-  width: 140px;
-}
+
 
 .title-animal-card{
   font-size:24px;
@@ -78,4 +76,58 @@ h2 {
   margin-left: 30px;
   padding:8px;
 }
+
+
+
+
+
+
+
+// changes
+
+.card-animal-list {
+  margin-bottom: 32px;
+  display: flex;
+  border-radius: 16px;
+  justify-content: space-between;
+
+}
+
+.animal-card{
+  height: 160px;
+  width: 200px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.photo-animal-card {
+  width: 120px;
+  height: 180px;
+  margin: -10px;
+
+}
+
+
+
+.card-info-wrap {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
