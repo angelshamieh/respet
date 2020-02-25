@@ -1,6 +1,16 @@
+<div class="center-header">
+  <!-- logo -->
+  <p><span>Helping pets in need!</span></p>
+</div>
 
 <div
   id="map"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
+
+<script>
+  navigator.geolocation.getCurrentPosition((data) => {
+  console.log(data);
+});
+</script>

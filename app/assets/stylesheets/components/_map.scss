@@ -2,3 +2,19 @@
   width: 100%;
   height: 600px;
 }
+
+.center-header {
+  margin: 12px;
+  padding: 16px 16px 0px 16px;
+  p {
+    text-align: center;
+    line-height: 0.1em;
+    border-bottom: 3px solid #FAD00D;
+
+    span {
+      padding: 0 8px;
+      margin: 0;
+      background: white;
+    }
+  }
+}
