@@ -1,29 +1,33 @@
 
-<div>
-  <%= link_to "Lost", animals_path(status: 'lost'), class: 'button' %>
-  <%= link_to "Found", animals_path(status: 'found'), class: 'button' %>
-</div>
+<div class="curved-yellow-banner">
+  <h2 class="search-h2"> <strong>Search for pet that have been..</strong></h2>
+  <div class="lost-found-button">
+    <%= link_to "Lost", animals_path(status: 'lost'), class: 'lostfound-button' %>
+    <%= link_to "Found", animals_path(status: 'found'), class: 'lostfound-button' %>
+  </div>
+
 
 <!-- # search bar -->
-<div>
-  <%= form_tag animals_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an animal"
-    %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+  <div class="container">
+    <%= form_tag animals_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an animal"
+      %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
 <!-- # add a pet button -->
 <% if params[:status] == 'lost' %>
   <%= link_to "Or, did you lose your pet?", new_animal_path(status: 'lost') %>
   <% else %>
     <%= link_to "Or, did you find a pet?", new_animal_path(status: 'found') %>
 <% end %>
+
 </div>
 
 <script>
-const button = document.querySelectorAll('.button');
+const button = document.querySelectorAll('.lostfound-button');
   button.forEach (button => {
     button.addEventListener("click", () =>  {
     button.style.backgroundColor = "black";
