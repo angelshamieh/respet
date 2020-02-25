@@ -1,0 +1,65 @@
+.curved-yellow-banner h2 {
+  font-size:16px;
+  padding: 12px 8px 8px 8px;
+  text-align: center;
+}
+
+.lost-found-button{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+
+}
+
+.add-button{
+  text-align: right;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.icon{
+  height: 50px;
+  margin: 8px 8px 8px 8px;
+  border-style: outset;
+}
+
+.animal-type-icon{
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-animal-list {
+  margin-left: 12px;
+  display:flex;
+  border: 1px solid #ccc;
+}
+
+.animal-title-card {
+  font-size: 16px;
+}
+
+.photo-animal-card {
+  width: 140px;
+}
+
+.title-animal-card{
+  font-size:24px;
+}
+
+.info-animal-card{
+  margin-left: 20px;
+}
+
+.image-adoption{
+  width:50px;
+}
+
+h3 {
+  text-align: center;
+  font-size:25px;
+}

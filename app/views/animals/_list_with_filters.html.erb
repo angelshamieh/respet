@@ -1,19 +1,27 @@
 
 <div>
-  <h2>Filter by pet type</h2>
+  <h2 class="filter-by-pet-header"><strong>Filter by pet type</strong></h2>
+  <div class="animal-type-icon">
 
-  <button class='animal-filter-icon animal-button-outline' data-animal-type='cat'><%= image_tag "khao-manee-cat.svg", alt: "cat", class: 'icon' %></button>
-  <button class='animal-filter-icon animal-button-outline' data-animal-type='dog'><%= image_tag "dog.svg", alt: "dog", class: 'icon' %></button>
-  <button class='animal-filter-icon animal-button-outline' data-animal-type='bird'><%= image_tag "bird.svg", alt: "bird", class: 'icon' %></button>
-  <button class='animal-filter-icon animal-button-outline' data-animal-type='rabbit'><%= image_tag "rabbit.svg", alt: "rabbit", class: 'icon' %></button>
+    <button class='animal-filter-icon animal-button-outline' data-animal-type='cat'><%= image_tag "khao-manee-cat.svg", alt: "cat", class: 'icon' %></button>
+    <button class='animal-filter-icon animal-button-outline' data-animal-type='dog'><%= image_tag "dog.svg", alt: "dog", class: 'icon' %></button>
+    <button class='animal-filter-icon animal-button-outline' data-animal-type='bird'><%= image_tag "bird.svg", alt: "bird", class: 'icon' %></button>
+    <button class='animal-filter-icon animal-button-outline' data-animal-type='rabbit'><%= image_tag "rabbit.svg", alt: "rabbit", class: 'icon' %></button>
+  </div>
 </div>
+
 
 <% @animals.each do |animal| %>
   <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>" data-animal-gender="<%= animal.gender %>">
-    <%= animal.title %>
-    <%= animal.gender%>
-    <%= animal.age %>
-    <%= animal.location %>
+      <%= image_tag "logo.png", class: "photo-animal-card" %>
+    <div card="info-animal-card">
+      <p class="title-animal-card"><strong><%= animal.title %></strong></p>
+      <p><%= animal.gender%></p>
+      <p><%= animal.age %></p>
+      <p><%= animal.location %></p>
+    </div>
   </div>
 <%end %>
+
+
 
