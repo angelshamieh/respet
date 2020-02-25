@@ -4,7 +4,7 @@ class Animal < ApplicationRecord
   belongs_to :user
 
   validates :title, presence: true
-  validates :photos, presence: true
+  # validates :photos, presence: true
   validates :location, presence: true
   validates :description, presence: true
   validates :gender, inclusion: { in: %w(male female), message: "must be male or female"}
