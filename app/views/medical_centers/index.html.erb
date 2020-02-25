@@ -1,0 +1,18 @@
+<div class="center-header">
+  <%= link_to root_path do  %>
+    <%= image_tag "logo-respet.png" %>
+  <% end %>
+  <p><span>Helping pets in need!</span></p>
+</div>
+
+<div
+  id="map"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+<script>
+  navigator.geolocation.getCurrentPosition((data) => {
+  console.log(data);
+});
+</script>
