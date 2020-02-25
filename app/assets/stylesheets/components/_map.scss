@@ -4,10 +4,14 @@
 }
 
 .center-header {
-  margin: 12px;
-  padding: 16px 16px 0px 16px;
+  margin: 0px 12px 12px 12px;
+  padding: 0px 16px 0px 16px;
+  text-align: center;
+  img {
+    width: 160px;
+    margin-bottom: 8px;
+  }
   p {
-    text-align: center;
     line-height: 0.1em;
     border-bottom: 3px solid #FAD00D;
 
