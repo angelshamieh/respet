@@ -6,6 +6,9 @@
 
 .user-setting-name {
   text-align: center;
+  h1 {
+    font-size: 20px;
+  }
 }
 
 .back-icon {
@@ -14,6 +17,16 @@
 
   a {
     color: black;
+  }
+}
+
+.user-avatar-large-circle {
+   img {
+    border-radius: 50%;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -4,12 +4,13 @@
       <i class="fas fa-cog"></i>
     <% end %>
   </div>
-  <!-- user profile image -->
+  <div class="user-avatar-small-circle">
+    <%= cl_image_tag current_user.avatar.key %>
+  </div>
   <div class="user-name">
-    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    <h1><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
   </div>
 </div>
-
 <div class="user-post-count">
   <h2><%= @user.animals.size %></h2>
   <p><%= "post".pluralize @user.animals.size %></p>
@@ -19,16 +20,16 @@
   <div class="user-animal-cards">
     <% @user.animals.each do |animal| %>
       <div class="user-animal-card">
-        <!-- animal.image -->
-        <div class="animal-card-info">
-          <%= animal.title %>
-          <%= link_to edit_animal_path(animal) do %>
-            <i class="fas fa-pencil-alt"></i>
-          <% end %>
-        </div>
-        <div class="animal-status">
-          <%= AnimalStatus.find(animal.animal_status_id).status%>
-        </div>
+        <%= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill %>
+      <div class="animal-card-info">
+        <%= animal.title.capitalize %>
+        <%= link_to edit_animal_path(animal) do %>
+          <i class="fas fa-pencil-alt"></i>
+        <% end %>
+      </div>
+      <div class="animal-status">
+        <%= AnimalStatus.find(animal.animal_status_id).status%>
+      </div>
       </div>
     <% end %>
   </div>

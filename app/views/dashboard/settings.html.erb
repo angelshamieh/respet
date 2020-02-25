@@ -3,9 +3,11 @@
       <i class="fas fa-arrow-left"></i>
     <% end %>
 </div>
-<!-- profile photo -->
+<div class="user-avatar-large-circle">
+  <%= cl_image_tag current_user.avatar.key %>
+</div>
 <div class="user-setting-name">
-  <h1><strong><%= @user.first_name %> <%= @user.last_name %></strong></h1>
+  <h1><strong><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></strong></h1>
 </div>
 <div class="user-info">
   <div><i class="fas fa-map-marker-alt"> </i> <%= @user.location %></div>
