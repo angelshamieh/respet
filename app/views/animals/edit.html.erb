@@ -1,12 +1,12 @@
 <div class="container mt-5">
-<%= simple_form_for [@animal] do |f| %>
+<%= simple_form_for @animal do |f| %>
   <%= f.input :title %>
   <%= f.input :breed %>
   <%= f.input :age %>
   <%= f.input :gender %>
   <%= f.input :location %>
   <%= f.input :description %>
-  <%= f.input :photos, as: :file %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
   <%= f.submit "Submit", class: "btn btn-primary " %>
 <% end %>

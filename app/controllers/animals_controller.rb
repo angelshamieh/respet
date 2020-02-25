@@ -14,8 +14,8 @@ class AnimalsController < ApplicationController
     @animal_type = @animal.animal_type.name
     # @animal_status = AnimalStatus.find(@animal.animal_status_id).status
     @animal_status = @animal.animal_status.status
-    # @first_photo = @animal.photos.first
-    # @remaining_photos = @animal.photos.reject{|photo| photo == @first_photo}
+    @first_photo = @animal.photos.first
+    @remaining_photos = @animal.photos.reject{|photo| photo == @first_photo}
   end
 
   def new

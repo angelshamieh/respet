@@ -18,8 +18,10 @@
   border-radius: 20px;
   background-color: white;
   width: 85%;
-  margin: 50px auto 0 auto;
+  margin: -57px auto 0 auto;
   padding: 8px 16px;
+  position: relative;
+  box-shadow: 2px 2px 4px grey;
 
   h1 {
     margin: 0;
@@ -28,10 +30,12 @@
 
 .user-show-details {
   margin: 8px 0;
-  padding: 0 32px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #FAD00D;
+  padding: 0px;
+
+  img {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
 }
 
 .light-grey-date {
@@ -39,7 +43,7 @@
 }
 
 .about-animal-text {
-  padding: 0 24px;
+  padding: 0 34px;
 }
 
 .yellow-message-button {
@@ -50,4 +54,27 @@
   padding: 8px 4px;
   margin: 0 40px;
   color: white;
+}
+
+.user-post-info {
+  border-bottom: 2px solid #FAD00D;
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-evenly;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    margin-top: -8px;
+  }
+}
+
+.avatar-wrap {
+  display:flex;
+  min-width: 44%;
+  justify-content: space-evenly;
 }
