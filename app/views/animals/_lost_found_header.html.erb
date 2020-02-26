@@ -15,11 +15,11 @@
   <div class="search-form-inline">
     <%= form_tag animals_path, method: :get, class: 'form-inline' do %>
     <div class="input-group">
-      <%= text_field_tag :query,
-        params[:query],
+      <%= text_field_tag :query, params[:query],
         class: "form-control",
         placeholder: "Search for a pet.."
       %>
+      <%= hidden_field_tag :status, params[:status] %>
       <div class="input-group-append">
         <% submit_tag "Search", class: "btn btn-primary search-button" %>
         <i class="fas fa-search search-button-icon"></i>
@@ -28,9 +28,9 @@
     <% end %>
 <!-- # add a pet button -->
 <% if params[:status] == 'lost' %>
-    <p><%= link_to "Or, did you lose your pet?", new_animal_path(status: 'lost'), class: 'add-button' %></p>
+    <p><i class="fas fa-plus"></i> <%= link_to "Or, did you lose your pet?", new_animal_path(status: 'lost'), class: 'add-button' %></p>
   <% else %>
-    <p><%= link_to "Or, did you find a pet?", new_animal_path(status: 'found'), class: 'add-button' %></p>
+    <p><i class="fas fa-plus"></i> <%= link_to "Or, did you find a pet?", new_animal_path(status: 'found'), class: 'add-button' %></p>
 <% end %>
 
 </div>

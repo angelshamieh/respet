@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   patch 'update_user', to: 'dashboard#update', as: :update_settings
 
+  patch 'animals/:id/update_status', to: 'animals#update_status', as: :update_animal_status
+
 end

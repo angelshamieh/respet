@@ -1,6 +1,7 @@
 <div class="curved-yellow-banner">
-  <div class="settings-icon">
-    <%= link_to settings_path do%>
+  <div>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'black-link' %>
+    <%= link_to settings_path, class: 'settings-icon' do%>
       <i class="fas fa-cog"></i>
     <% end %>
   </div>
@@ -17,8 +18,11 @@
 </div>
 <div class="user-posts">
   <h1><strong>My Posts</strong></h1>
+  <% if @user.animals.empty? %>
+    <p> You have no posts</p>
+  <% else %>
   <div class="user-animal-cards">
-    <% @user.animals.each do |animal| %>
+    <% @user.animals.order(created_at: :desc).each do |animal| %>
       <div class="user-animal-card">
         <%#= link_to animal_path(animal) do %>
           <%= render 'animals/photo_placeholder', animal: animal %>
@@ -26,14 +30,22 @@
         <%# end %>
       <div class="animal-card-info">
         <%= animal.title.capitalize %>
-        <%= link_to edit_animal_path(animal) do %>
-          <i class="fas fa-pencil-alt"></i>
+        <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
+          <%= link_to edit_animal_path(animal) do %>
+            <i class="fas fa-pencil-alt"></i>
+        <% end %>
         <% end %>
       </div>
-      <div class="animal-status">
+      <div class="animal-status" data-animal-status-id="<%= animal.id %>">
         <%= AnimalStatus.find(animal.animal_status_id).status%>
+        <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' %>
+          <%= link_to "Reunited?", update_animal_status_path(animal), method: 'patch', remote: true, data: {confirm: 'Are you sure you want to change this status?'} %>
+        <% elsif animal.animal_status.status == 'adopt' %>
+          <%= link_to "Adopted?", update_animal_status_path(animal), method: 'patch', remote: true, data: {confirm: 'Are you sure you want to change this status?'} %>
+        <% end %>
       </div>
       </div>
     <% end %>
   </div>
+  <% end %>
 </div>

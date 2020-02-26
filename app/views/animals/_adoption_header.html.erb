@@ -1,12 +1,14 @@
 <div class="curved-yellow-banner">
   <h3><strong><u>ADOPT AN ANIMAL <%= image_tag 'login-banner.png', class: 'image-adoption' %></u></strong></h3>
+    <p class="add-adoption"><i class="fas fa-plus"></i> <%= link_to "Post a pet for Adoption?", new_animal_path(status: 'adopt'), class: 'add-button' %></p>
 
   <div class='adoption-header'>
     <p class="filter-by-pet-header"><strong>Filter by gender</strong></p>
-      <div class="gender-button">
-        <button class="list-button" data-animal-gender='female'> Female</button>
-        <button class="list-button" data-animal-gender='male'>Male</button>
+      <div class="gender-buttons">
+        <button class="gender-list-button list-button" data-animal-gender='female'> Female</button>
+        <button class="gender-list-button list-button" data-animal-gender='male'>Male</button>
       </div>
   </div>
 </div>
+
 

@@ -35,10 +35,7 @@
   position: absolute;
   right: 6px;
   font-size: 24px;
-
-  a {
-    color: black;
-  }
+  color:black;
 }
 
 .user-animal-cards {
@@ -75,11 +72,12 @@
 .user-avatar-small-circle {
   img {
     border-radius: 50%;
-    width: 100px;
+    width: 60px;
+    height: 85px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 16px;
+    padding-top: 8px;
   }
 }
 
@@ -87,6 +85,11 @@
   padding-left: 24px;
 }
 
+.black-link {
+  margin-left: 6px;
+  font-size: 16px;
+  color:black;
+}
 
 
 

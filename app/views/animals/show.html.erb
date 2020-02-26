@@ -2,7 +2,9 @@
   <%= link_to @back_url do%>
     <i class="fas fa-arrow-left"></i>
   <% end %>
-  <%= image_tag "logo.png" %>
+  <%= link_to root_path do%>
+    <%= image_tag "logo.png" %>
+  <% end %>
 </div>
 <!-- carousel ofimages -->
 <div class="carousel">
@@ -46,7 +48,7 @@
     <div><i class="fas fa-map-marker-alt"> </i> <%= @animal.location %></div>
     <%= render "animal_type_icon", animal_type: @animal_type %>
     <%= render "animal_gender_icon", gender: @animal.gender %>
-      <% if @animal_status == 'lost' || @animal_status == 'found' %>
+      <% if @animal_status == 'lost' || @animal_status == 'found' || @animal_status == 'reunited' || @animal_status == 'adopted' %>
         <p><%= @animal_status.upcase %></p>
       <% end %>
   </div>
@@ -63,6 +65,6 @@
   <p><strong>About</strong></p>
   <p><%= @animal.description %></p>
 </div>
-<div class="yellow-message-button">
+<div class="yellow-message-button mb-3">
   Message <%= @animal.user.first_name.capitalize %>
 </div>
