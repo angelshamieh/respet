@@ -6,7 +6,11 @@ class AnimalsController < ApplicationController
 
   def index
       # 2. Get all animals with the given status
-    @animals = policy_scope(Animal).where(animal_status: @status)
+    if params[:query].present?
+      @animals = policy_scope(Animal.search_by_title_and_location_and_description(params[:query]))
+    else
+      @animals = policy_scope(Animal).where(animal_status: @status)
+    end
   end
 
 
