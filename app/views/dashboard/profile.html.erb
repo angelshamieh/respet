@@ -6,11 +6,7 @@
     <% end %>
   </div>
   <div class="user-avatar-small-circle">
-    <% if @user.avatar.attached? %>
-      <%= cl_image_tag @user.avatar.key %>
-    <%else %>
-      <%= image_tag "logo.png"%>
-    <% end %>
+    <%= render 'avatar_placeholder', user: current_user %>
   </div>
   <div class="user-name">
     <h1><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
@@ -28,9 +24,10 @@
   <div class="user-animal-cards">
     <% @user.animals.order(created_at: :desc).each do |animal| %>
       <div class="user-animal-card">
-        <%= link_to animal_path(animal) do %>
-        <%= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
-        <% end %>
+        <%#= link_to animal_path(animal) do %>
+          <%= render 'animals/photo_placeholder', animal: animal %>
+        <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
+        <%# end %>
       <div class="animal-card-info">
         <%= animal.title.capitalize %>
         <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>

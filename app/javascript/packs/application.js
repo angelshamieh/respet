@@ -8,5 +8,5 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initFilter();
 initGenderFilter();
-initNavHighlight();
+// initNavHighlight();
 initMapbox();

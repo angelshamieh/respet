@@ -9,6 +9,7 @@ class MedicalCentersController < ApplicationController
         lat: center.latitude,
         lng: center.longitude
       }
+
     end
   end
 end

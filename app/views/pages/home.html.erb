@@ -24,7 +24,7 @@
   <div class="home-pet-cards">
     <% @lost_animals.each do |animal| %>
       <div class="home-pet-card">
-        <!-- image -->
+        <%= render 'animals/photo_placeholder', animal: animal %>
         <p class="animal-title"><%= animal.title %></p>
         <!-- gender -->
         <p class="animal-location"><i class="fas fa-map-marker-alt"></i> <%= animal.location %></p>
@@ -42,7 +42,7 @@
   <div class="home-pet-cards">
     <% @adopt_animals.each do |animal| %>
       <div class="home-pet-card">
-        <!-- image -->
+        <%= render 'animals/photo_placeholder', animal: animal %>
         <p class="animal-title"><%= animal.title %></p>
         <!-- gender -->
         <p class="animal-location"><i class="fas fa-map-marker-alt"></i> <%= animal.location %></p>

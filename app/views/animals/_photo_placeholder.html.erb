@@ -1,0 +1,5 @@
+<% if animal.photos.attached? %>
+  <%= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
+<% else %>
+  <%= image_tag "logo.png", class: 'img-placeholder' %>
+<% end %>
