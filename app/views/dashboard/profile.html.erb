@@ -21,6 +21,9 @@
 </div>
 <div class="user-posts">
   <h1><strong>My Posts</strong></h1>
+  <% if @user.animals.empty? %>
+    <p> You have no posts</p>
+  <% else %>
   <div class="user-animal-cards">
     <% @user.animals.order(created_at: :desc).each do |animal| %>
       <div class="user-animal-card">
@@ -46,4 +49,5 @@
       </div>
     <% end %>
   </div>
+  <% end %>
 </div>
