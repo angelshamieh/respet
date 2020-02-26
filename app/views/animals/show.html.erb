@@ -56,7 +56,7 @@
 <div class="user-post-info">
   <!-- avatar -->
   <div class="avatar-wrap">
-    <%= cl_image_tag @animal.user.avatar.key %>
+    <%= render 'dashboard/avatar_placeholder', user: @animal.user %>
     <p><strong><%= @animal.user.first_name.capitalize %> <%= @animal.user.last_name.capitalize %></strong></p>
   </div>
   <p class="light-grey-date"><%= @animal.created_at.strftime("%B, %d, %Y") %></p>
