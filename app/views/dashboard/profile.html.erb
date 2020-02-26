@@ -22,15 +22,17 @@
 <div class="user-posts">
   <h1><strong>My Posts</strong></h1>
   <div class="user-animal-cards">
-    <% @user.animals.each do |animal| %>
+    <% @user.animals.order(created_at: :desc).each do |animal| %>
       <div class="user-animal-card">
         <%= link_to animal_path(animal) do %>
         <%= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
         <% end %>
       <div class="animal-card-info">
         <%= animal.title.capitalize %>
-        <%= link_to edit_animal_path(animal) do %>
-          <i class="fas fa-pencil-alt"></i>
+        <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
+          <%= link_to edit_animal_path(animal) do %>
+            <i class="fas fa-pencil-alt"></i>
+        <% end %>
         <% end %>
       </div>
       <div class="animal-status" data-animal-status-id="<%= animal.id %>">
