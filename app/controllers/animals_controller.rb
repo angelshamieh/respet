@@ -16,6 +16,7 @@ class AnimalsController < ApplicationController
     @animal_status = @animal.animal_status.status
     @first_photo = @animal.photos.first
     @remaining_photos = @animal.photos.reject{|photo| photo == @first_photo}
+    @back_url = session[:my_previous_url] = URI(request.referer).path
   end
 
   def new
