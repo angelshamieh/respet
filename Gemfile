@@ -8,6 +8,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'geocoder'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
+gem 'pg_search', '~> 2.3.0'
 gem 'puma'
 gem 'rails', '5.2.4.1'
 gem 'redis'
