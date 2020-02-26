@@ -53,9 +53,9 @@ class AnimalsController < ApplicationController
 
   def update_status
     if @animal.animal_status.status == 'lost' || @animal.animal_status.status == 'found'
-      @animal.animal_status = AnimalStatus.find(10)
+      @animal.animal_status = AnimalStatus.find_by(status: 'reunited')
     elsif @animal.animal_status.status == 'adopt'
-      @animal.animal_status = AnimalStatus.find(11)
+      @animal.animal_status = AnimalStatus.find_by(status: 'adopted')
     end
     if @animal.save
       respond_to do |format|
