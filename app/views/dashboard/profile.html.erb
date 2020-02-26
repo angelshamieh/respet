@@ -33,8 +33,13 @@
           <i class="fas fa-pencil-alt"></i>
         <% end %>
       </div>
-      <div class="animal-status">
+      <div class="animal-status" data-animal-status-id="<%= animal.id %>">
         <%= AnimalStatus.find(animal.animal_status_id).status%>
+        <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' %>
+          <%= link_to "Reunited?", update_animal_status_path(animal), method: 'patch', remote: true, data: {confirm: 'Are you sure you want to change this status?'} %>
+        <% elsif animal.animal_status.status == 'adopt' %>
+          <%= link_to "Adopted?", update_animal_status_path(animal), method: 'patch', remote: true, data: {confirm: 'Are you sure you want to change this status?'} %>
+        <% end %>
       </div>
       </div>
     <% end %>

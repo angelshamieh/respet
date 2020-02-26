@@ -17,4 +17,8 @@ class AnimalPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def update_status?
+    update?
+  end
+
 end
