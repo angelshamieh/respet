@@ -48,7 +48,7 @@
     <div><i class="fas fa-map-marker-alt"> </i> <%= @animal.location %></div>
     <%= render "animal_type_icon", animal_type: @animal_type %>
     <%= render "animal_gender_icon", gender: @animal.gender %>
-      <% if @animal_status == 'lost' || @animal_status == 'found' %>
+      <% if @animal_status == 'lost' || @animal_status == 'found' || @animal_status == 'reunited' || @animal_status == 'adopted' %>
         <p><%= @animal_status.upcase %></p>
       <% end %>
   </div>
