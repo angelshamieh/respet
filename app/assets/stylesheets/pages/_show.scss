@@ -78,3 +78,22 @@
   min-width: 44%;
   justify-content: space-evenly;
 }
+
+.show-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-size: 24px;
+    color: black;
+    padding-left: 8px;
+  }
+}
+
+.show-header {
+
+  img {
+    width: 56px;
+  }
+}
