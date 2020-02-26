@@ -35,6 +35,8 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+      <% else %>
+      <%= render 'photo_placeholder', animal: @animal %>
     <% end %>
   </div>
 <div class="animal-show-details">
