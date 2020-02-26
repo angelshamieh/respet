@@ -7,6 +7,7 @@ class AnimalsController < ApplicationController
   def index
       # 2. Get all animals with the given status
     @animals = policy_scope(Animal).where(animal_status: @status)
+
   end
 
 

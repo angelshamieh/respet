@@ -1,29 +1,30 @@
 <div class="fixed-bottom navbaar">
-  <div class="navbar-icon">
+
+  <div class="navbar-icon" id='navlost'>
     <%= image_tag "poster.svg", alt: "Lost & Found" %>
     <p>Lost & Found</p>
     <%= link_to "", animals_path(status: :lost), class: "absolute-0-0" %>
   </div>
 
-  <div class="navbar-icon">
+  <div class="navbar-icon" id='navadopt'>
     <%= image_tag "adoption.svg", alt: "Adoption" %>
     <p>Adoption</p>
     <%= link_to "", animals_path(status: :adopt), class: "absolute-0-0" %>
   </div>
 
-  <div class="navbar-icon">
+  <div class="navbar-icon" id="navemergency">
     <%= image_tag "sos.svg", alt: "Medical Emergency" %>
     <p>Emergency</p>
     <%= link_to "", medical_centers_path, class: "absolute-0-0" %>
   </div>
 
-  <div class="navbar-icon">
+  <div class="navbar-icon" id=navmessages>
     <%= image_tag "chat.svg", alt: "Messages" %>
     <p>Messages</p>
     <%= link_to "", animals_path, class: "absolute-0-0" %>
   </div>
 
-  <div class="navbar-icon">
+  <div class="navbar-icon" id='navprofile'>
     <%= image_tag "user.svg", alt: "Profile" %>
     <% if current_user.nil? %>
       <p>Log-in</p>
@@ -34,3 +35,23 @@
     <% end %>
   </div>
 </div>
+
+<script>
+  let idToHighlight = '';
+  if (<%= request.env['PATH_INFO'].include?('medical') %>){
+    idToHighlight = '#navemergency'
+  }
+  else if (<%= request.env['PATH_INFO'].include?('chat') %>){
+    idToHighlight = '#navmessages'
+  }
+  else if (<%= request.env['PATH_INFO'].include?('dashboard' || 'setting') %>){
+    idToHighlight = '#navprofile'
+  }
+  else if (<%= params[:status] == 'adopt' %>){
+    idToHighlight = '#navadopt'
+  }
+  else if (<%= ['lost', 'found'].any? {|elem| elem == params[:status]} %>){
+    idToHighlight = '#navlost'
+  }
+  document.querySelector(idToHighlight).classList.add('navbar-icon-active');
+</script>
