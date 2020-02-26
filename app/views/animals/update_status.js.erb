@@ -1,0 +1,12 @@
+
+
+
+if(typeof(handleAnimalStatus) === 'undefined' ){
+  let handleAnimalStatus = () => {
+    let animal = document.querySelector("[data-animal-status-id='<%= @animal.id %>']");
+    animal.innerText = '<%= @animal.animal_status.status %>'
+  }
+  handleAnimalStatus();
+}else{
+  handleAnimalStatus();
+}

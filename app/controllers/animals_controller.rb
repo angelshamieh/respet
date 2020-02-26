@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
   DEFAULT_ANIMAL_STATUS = 'lost'
 
-  before_action :set_animal, only: [:show, :edit, :update]
+  before_action :set_animal, only: [:show, :edit, :update, :update_status]
   before_action :set_animal_status, only: :index
 
   def index
@@ -44,6 +44,20 @@ class AnimalsController < ApplicationController
       redirect_to animal_path(@animal)
     else
       render :edit
+    end
+  end
+
+  def update_status
+    if @animal.animal_status.status == 'lost' || @animal.animal_status.status == 'found'
+      @animal.animal_status = AnimalStatus.find(10)
+    elsif @animal.animal_status.status == 'adopt'
+      @animal.animal_status = AnimalStatus.find(11)
+    end
+    if @animal.save
+      respond_to do |format|
+        format.html {  }
+        format.js
+      end
     end
   end
 
