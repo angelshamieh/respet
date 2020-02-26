@@ -24,10 +24,10 @@
   <div class="user-animal-cards">
     <% @user.animals.order(created_at: :desc).each do |animal| %>
       <div class="user-animal-card">
-        <%#= link_to animal_path(animal) do %>
+        <%= link_to animal_path(animal) do %>
           <%= render 'animals/photo_placeholder', animal: animal %>
         <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
-        <%# end %>
+        <% end %>
       <div class="animal-card-info">
         <%= animal.title.capitalize %>
         <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
