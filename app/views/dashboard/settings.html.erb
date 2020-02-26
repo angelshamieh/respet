@@ -4,7 +4,7 @@
     <% end %>
 </div>
 <div class="user-avatar-large-circle">
-  <%= cl_image_tag current_user.avatar.key %>
+  <%= render 'avatar_placeholder', user: current_user %>
 </div>
 <div class="user-setting-name">
   <h1><strong><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></strong></h1>
