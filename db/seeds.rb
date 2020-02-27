@@ -49,4 +49,5 @@ Animal.create!(user: charlotte, animal_type: cat, animal_status: reunited, title
 Animal.create!(user: angel, animal_type: cat, animal_status: reunited, title: "John", location: "Tel Aviv", gender: "male", description: "Last seen in Haroe 82, very active, was waering a blue collar.")
 Animal.create!(user: angel, animal_type: dog, animal_status: reunited, title: "Lala", location: "Ramat Gan", gender: "male", description: "Last seen in Haroe 82, very active, was waering a blue collar.")
 
+
 puts "Created #{User.count} users, #{AnimalType.count} animal types, #{AnimalStatus.count} animal statuses and #{Animal.count} animals.."
