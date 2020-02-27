@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
   DEFAULT_ANIMAL_STATUS = 'lost'
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_animal, only: [:show, :edit, :update, :update_status]
   before_action :set_animal_status, only: :index
 
