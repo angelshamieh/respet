@@ -3,6 +3,7 @@ Animal.destroy_all
 User.destroy_all
 AnimalType.destroy_all
 AnimalStatus.destroy_all
+MedicalCenter.destroy_all
 
 puts "creating users.."
 
@@ -305,6 +306,17 @@ Animal.create!(
   age: 1)
 
 Animal.create!(
+  user: eyal,
+  animal_type: rabbit,
+  animal_status: found,
+  title: "Pet rabbit found",
+  location: "Tel Aviv",
+  gender: "male",
+  description: "Spotted this rabbit near Herzl, Ramat Gan. The cat is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'rabbit',
+  age: 1)
+
+Animal.create!(
   user: charlotte,
   animal_type: cat,
   animal_status: found,
@@ -317,13 +329,79 @@ Animal.create!(
 
 Animal.create!(
   user: angel,
-  animal_type: cat,
+  animal_type: bird,
   animal_status: found,
   title: "Found a house-trained bird",
   location: "Tel Aviv",
   gender: "male",
   description: "Spotted this bird near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
   breed: 'bird',
+  age: 1)
+
+Animal.create!(
+  user: angel,
+  animal_type: bird,
+  animal_status: reunited,
+  title: "Found a house-trained bird",
+  location: "Tel Aviv",
+  gender: "male",
+  description: "Spotted this bird near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'bird',
+  age: 1)
+
+Animal.create!(
+  user: talia,
+  animal_type: cat,
+  animal_status: reunited,
+  title: "lost cat",
+  location: "Tel Aviv",
+  gender: "male",
+  description: "Spotted this bird near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'cat',
+  age: 1)
+
+Animal.create!(
+  user: charlotte,
+  animal_type: cat,
+  animal_status: reunited,
+  title: "Found a house-trained bird",
+  location: "Tel Aviv",
+  gender: "male",
+  description: "Spotted this bird near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'bird',
+  age: 1)
+
+Animal.create!(
+  user: eyal,
+  animal_type: dog,
+  animal_status: reunited,
+  title: "Found a house-trained bird",
+  location: "Tel Aviv",
+  gender: "male",
+  description: "Spotted this bird near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'bird',
+  age: 1)
+
+Animal.create!(
+  user: talia,
+  animal_type: dog,
+  animal_status: adopted,
+  title: "Nicky",
+  location: "Tel Aviv",
+  gender: "female",
+  description: "Spotted this dog near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'dog',
+  age: 1)
+
+Animal.create!(
+  user: eyal,
+  animal_type: dog,
+  animal_status: adopted,
+  title: "Found a house-trained bird",
+  location: "Haifa",
+  gender: "male",
+  description: "Spotted this bird near Herzl. The bird is very friendly and seems to be house-trained. Please contact me if you know this cat.",
+  breed: 'cat',
   age: 1)
 
 puts 'creating medical centers...'
@@ -338,10 +416,10 @@ MedicalCenter.create!(
   address:"Dizengoff St 50, Tel Aviv-Yafo",
   phone: "03-620-6077")
 
-MedicalCenter.create!(
-  name: "Central vet Tel Aviv",
-  address:"Shlomo Ibn Gabirol St 15, Tel Aviv-Yafo",
-  phone: "077-507-7157")
+# MedicalCenter.create!(
+#   name: "Central vet Tel Aviv",
+#   address:"Shlomo Ibn Gabirol St 15, Tel Aviv-Yafo",
+#   phone: "077-507-7157")
 
 MedicalCenter.create!(
   name: "Medical-vet",
@@ -353,16 +431,15 @@ MedicalCenter.create!(
   address:"Melchett St 30, Tel Aviv-Yafo",
   phone: "03-771-0088")
 
-MedicalCenter.create!(
-  name: "Midtown Animal Clinic",
-  address:"Tchernikhovski St 15, Tel Aviv-Yafo",
-  phone: "03-525-4798
-")
+# MedicalCenter.create!(
+#   name: "Midtown Animal Clinic",
+#   address:"Tchernikhovski St 15, Tel Aviv-Yafo",
+#   phone: "03-525-4798")
 
-MedicalCenter.create!(
-  name: "VetTelaviv",
-  address:"Tchernikhovski St 19, Tel Aviv-Yafo",
-  phone: "03-609-9707")
+# MedicalCenter.create!(
+#   name: "VetTelaviv",
+#   address:"Tchernikhovski St 19, Tel Aviv-Yafo",
+#   phone: "03-609-9707")
 
 MedicalCenter.create!(
   name: "Asaf Veterinary Hospital",
@@ -374,10 +451,10 @@ MedicalCenter.create!(
   address:"Jabotinsky St 1, Tel Aviv-Yafo",
   phone: "03-601-1636")
 
-MedicalCenter.create!(
-  name: "Veterinary Clinic Tel Aviv Dr. Tamar Fliedel",
-  address:"Betsal'el St 2, Tel Aviv-Yafo",
-  phone: "03-609-0149")
+# MedicalCenter.create!(
+#   name: "Veterinary Clinic Tel Aviv Dr. Tamar Fliedel",
+#   address:"Betsal'el St 2, Tel Aviv-Yafo",
+#   phone: "03-609-0149")
 
 MedicalCenter.create!(
   name: "Veterinary hospital in the square",
@@ -394,10 +471,10 @@ MedicalCenter.create!(
   address:"Bialik St 75, Ramat Gan",
   phone: "03-672-7234")
 
-MedicalCenter.create!(
-  name: "Veterinarian Givatayim - Animal Clinic of Assaf",
-  address:"Weizman St 30, Giv'atayim, 5342701",
-  phone: "1-700-706-363")
+# MedicalCenter.create!(
+#   name: "Veterinarian Givatayim - Animal Clinic of Assaf",
+#   address:"Weizman St 30, Giv'atayim, 5342701",
+#   phone: "1-700-706-363")
 
 MedicalCenter.create!(
   name: "Animal Love",
