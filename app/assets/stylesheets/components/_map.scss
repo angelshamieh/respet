@@ -31,3 +31,13 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.map-popup {
+  border: 3px solid #FAD00D;
+  border-radius: 16px;
+  padding: 12px;
+  p {
+    margin: 0;
+    text-align: left;
+  }
+}
