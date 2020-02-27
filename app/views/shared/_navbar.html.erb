@@ -44,7 +44,7 @@
   else if (<%= request.env['PATH_INFO'].include?('chat') %>){
     idToHighlight = '#navmessages'
   }
-  else if (<%= request.env['PATH_INFO'].include?('dashboard' || 'setting') %>){
+  else if (<%= %w[dashboard settings user].any? { |path| request.env['PATH_INFO'].include?(path) } %>){
     idToHighlight = '#navprofile'
   }
   else if (<%= params[:status] == 'adopt' %>){
@@ -53,5 +53,7 @@
   else if (<%= ['lost', 'found'].any? {|elem| elem == params[:status]} %>){
     idToHighlight = '#navlost'
   }
-  document.querySelector(idToHighlight).classList.add('navbar-icon-active');
+  if (idToHighlight != ''){
+    document.querySelector(idToHighlight).classList.add('navbar-icon-active');
+  }
 </script>
