@@ -11,6 +11,11 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :location, presence: true
+  validates :bookmarks, uniqueness: { scope: :animal }
 
   has_one_attached :avatar
+
+  def bookmark_for_animal(animal)
+    bookmarks.find_by(animal: animal)
+  end
 end

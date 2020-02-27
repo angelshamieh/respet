@@ -1,0 +1,12 @@
+const initToggleBookmark = () => {
+  document.querySelectorAll('.bookmark').forEach((button) => {
+
+    button.addEventListener('click', (event) => {
+      if (button.data == true)
+      button.classList.remove('.active_bookmark');
+      button.classList.add('.active_bookmark')
+    });
+  })
+}
+
+export { initToggleBookmark }
