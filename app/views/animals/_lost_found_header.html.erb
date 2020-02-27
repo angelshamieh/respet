@@ -4,17 +4,8 @@
     <h2> <strong>Search for pet that have been..</strong></h2>
   </div>
   <div class="lost-found-button">
-    <% lost_button_class = 'list-button' + (params[:status] == 'lost' ? ' active' : '') %>
-    <% found_button_class = 'list-button' + (params[:status] == 'found' ? ' active' : '') %>
-   <!-- <strong><%= link_to "Lost", animals_path(status: 'lost'), class: lost_button_class %></strong> -->
-   <%= link_to animals_path(status: 'lost') do %>
-    <a class='list-button lost_button_class'>Lost</button>
-   <% end %>
-
-   <%= link_to animals_path(status: 'found') do %>
-    <a class='list-button found_button_class'>Found</button>
-   <% end %>
-
+    <a class="list-button lost_button_class" href="animals?status=lost">Lost</a>
+    <a class='list-button found_button_class' href="animals?status=found">Found</a>
   </div>
 
 
@@ -41,3 +32,13 @@
 <% end %>
 
 </div>
+
+<script>
+  let button = '';
+  if (<%= params[:status] == 'lost' %>) {
+    button = '.lost_button_class'
+  } else if (<%= params[:status] == 'found' %>) {
+    button = '.found_button_class'
+  }
+  document.querySelector(button).classList.add('active');
+</script>
