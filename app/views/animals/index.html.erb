@@ -1,12 +1,12 @@
-<!-- header -->
+<div>
+
 <% if ['lost', 'found'].include? @status.status %>
   <%= render 'lost_found_header' %>
-<%#= render 'list_with_filters', animal: @animal
 
-<% elsif @status == "adoption"%>
 <% elsif @status.status == "adopt"%>
   <%= render 'adoption_header' %>
 <%end %>
 
-<!-- body -->
+
 <%= render 'list_with_filters' %>
+</div>
