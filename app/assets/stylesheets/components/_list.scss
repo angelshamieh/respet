@@ -133,6 +133,9 @@ a.add-button{
   margin-top: 30px;
   font-size: 20px;
   margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .search-button-icon{
