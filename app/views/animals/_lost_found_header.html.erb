@@ -6,8 +6,15 @@
   <div class="lost-found-button">
     <% lost_button_class = 'list-button' + (params[:status] == 'lost' ? ' active' : '') %>
     <% found_button_class = 'list-button' + (params[:status] == 'found' ? ' active' : '') %>
-   <strong><%= link_to "Lost", animals_path(status: 'lost'), class: lost_button_class %></strong>
-   <strong><%= link_to "Found", animals_path(status: 'found'), class: found_button_class %></strong>
+   <!-- <strong><%= link_to "Lost", animals_path(status: 'lost'), class: lost_button_class %></strong> -->
+   <%= link_to animals_path(status: 'lost') do %>
+    <a class='list-button lost_button_class'>Lost</button>
+   <% end %>
+
+   <%= link_to animals_path(status: 'found') do %>
+    <a class='list-button found_button_class'>Found</button>
+   <% end %>
+
   </div>
 
 

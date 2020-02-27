@@ -64,6 +64,7 @@
   width: 200px;
   background: #FFFFFF;
   display: flex;
+  border-radius: 16px;
 }
 
 
@@ -85,21 +86,6 @@
 }
 
 
-
-.list-button{
-  border-radius: 16px;
-  color: black;
-}
-
-.list-button.active {
-  background-color: black;
-  color: white;
-  padding: 2px 70px 7px 3px;
-  text-align:center;
-
-}
-
-
 .card-gender-wrap{
   width:60px;
   margin-top: -3px;
@@ -109,24 +95,6 @@
 
 }
 
-.lost-found-button{
-  display:flex;
-  background-color: white;
-  justify-content: center;
-  width: 180px;
-  margin-left: 100px;
-  margin-bottom: 32px;
-  border-radius: 16px;
-  height:35px;
-
-a {
-  text-decoration:none;
-  margin: 3px;
-
-  }
-
-
-}
 a.add-button{
   text-align: right;
   color: black;
@@ -151,20 +119,6 @@ a.add-button{
 
 .adoption-header {
   margin-left: 30px;
-
-}
-
-.gender-buttons {
-  display:flex;
-  background-color: white!important;
-  justify-content: center;
-  width: 190px;
-  margin-left: 6px;
-  margin-bottom: 32px;
-  border-radius: 16px;
-  height: 35px;
-  width: 180px;
-  padding: 8px;
 
 }
 
@@ -198,20 +152,61 @@ a.add-button{
   margin-left:12px;
 }
 
+// .gender-buttons {
+//   width:152px;
+//   display: flex;
+//   background-color: white;
+//   justify-content: center;
+//   width: 180px;
+//   border-radius: 16px;
+//   height:35px;
+//   button {
+//     background-color: white;
+//     border:none;
+//   }
+// }
+
 .gender-buttons {
-  width:152px;
-  display:flex;
+  display: flex;
   background-color: white;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 180px;
   border-radius: 16px;
-  height:35px;
+  height: 35px;
   button {
-    background-color: white;
-    border:none;
+    border-radius: 16px;
   }
 }
 
+.lost-found-button{
+  margin-left: 100px;
+  margin-bottom: 32px;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  width: 180px;
+  border-radius: 16px;
+  height: 35px;
+  a {
+    border-radius: 16px;
+    text-decoration: none;
+  }
+}
+
+.list-button{
+  text-align: center;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  width: 50%;
+}
+
+.list-button.active {
+  background-color: black;
+  border: 1px solid black;
+  color: white !important;
+}
 
 .add-adoption{
   margin-left: 36px;
