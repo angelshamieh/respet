@@ -8,7 +8,8 @@ class MedicalCentersController < ApplicationController
       {
         lat: center.latitude,
         lng: center.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { center: center })
+        infoWindow: render_to_string(partial: "info_window", locals: { center: center }),
+        image_url: helpers.asset_url('paw-solid.svg')
       }
 
     end
