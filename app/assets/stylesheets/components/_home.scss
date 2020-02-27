@@ -54,13 +54,14 @@
 }
 
 .home-pet-card {
-  border: 1px solid #FAD00D;
+  border: 2px solid #FAD00D;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 8px;
   border-radius: 16px;
   width: 180px;
   height: 250px;
   position: relative;
+  box-sizing: content-box;
 
   .animal-title {
     font-size: 24px;
@@ -83,11 +84,12 @@
   }
 
   img {
-    width: 160px;
+    width: 180px;
     height: 180px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-
+    object-fit: cover;
+    object-postion: center;
     margin: 0 auto;
   }
 }
