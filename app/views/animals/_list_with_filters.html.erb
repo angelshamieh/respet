@@ -8,7 +8,7 @@
     <img src="assets/rabbit.svg" data-animal-type='rabbit' alt="rabbit" class='animal-filter-icon icon'>
   </div>
 </div>
-
+<div class="all-cards">
 <% @animals.each do |animal|%>
   <div class="card-animal-list" data-animal-type="<%= animal.animal_type.name %>" data-animal-gender="<%= animal.gender %>">
     <div class="animal-card">
@@ -41,5 +41,6 @@
     </div>
   </div>
 <% end %>
+</div>
 
 
