@@ -6,3 +6,16 @@
 @import "navbar";
 @import "list";
 @import "map";
+
+.new_animal {
+  label {
+    img {
+      width: 55px;
+    }
+  }
+}
+
+.new_animal input[type="radio"]:checked {
+  // display: none;
+  opacity: 0.3;
+}

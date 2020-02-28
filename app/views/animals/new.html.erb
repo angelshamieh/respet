@@ -6,12 +6,19 @@
   <%= f.association :animal_type %>
   <%= f.input :title %>
   <%= f.input :breed %>
-  <%= f.input :age%>
+  <%= f.input :age %>
   <%= f.input :gender, collection: %w[male female] %>
   <%= f.input :location %>
   <%= f.input :description %>
+  <%#= f.input :title, as: :radio_buttons, collection: %w[cat dog rabbit bird], wrapper: :vertical_collection_inline %>
+  <%= f.collection_radio_buttons(:title, [['Dog', 'dog'], ['Bird', 'bird'], ['Rabbit', 'rabbit'], ['Cat', 'khao-manee-cat']],
+                             :first, :last,
+                             :item_wrapper_class => 'horizontal',
+                             ) { |title| title.label { image_tag("#{title.text}.svg") + title.radio_button} }%>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Submit", class: "btn btn-primary " %>
 <% end %>
 </div>
 
+<style>
+</style>
