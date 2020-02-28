@@ -14,13 +14,9 @@
     <div class="animal-card">
       <div class="image-wrap">
         <% if animal.photos.attached? %>
-        <%= link_to animal_path(animal) do %>
           <%= cl_image_tag animal.photos.first.key, class: "photo-animal-card" %>
-          <% end %>
         <% else %>
-          <%= link_to animal_path(animal) do %>
-            <%= image_tag "logo.png", class: "photo-animal-card" %>
-          <% end %>
+          <%= image_tag "logo.png", class: "photo-animal-card" %>
         <% end %>
       </div>
       <div class="card-info-wrap">
@@ -31,13 +27,14 @@
          <p class='animal-location-padding'><i class="fas fa-map-marker-alt"></i> <%= animal.location.capitalize %></p>
         </div>
       </div>
-    </div>
-    <div class="card-gender-wrap">
-      <%if animal.gender == 'male'%>
-        <i class="fas fa-mars"></i>
-      <%else %>
-          <i class="fas fa-venus"></i>
-      <% end %>
+      <div class="card-gender-wrap">
+        <%if animal.gender == 'male'%>
+          <i class="fas fa-mars"></i>
+        <%else %>
+            <i class="fas fa-venus"></i>
+        <% end %>
+      </div>
+      <%= link_to "", animal_path(animal), class: "absolute-0-0"  %>
     </div>
   </div>
 <% end %>
