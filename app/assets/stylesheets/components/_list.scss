@@ -56,10 +56,11 @@
 
 .animal-card{
   height: 160px;
-  width: 200px;
+  width: 100%;
   background: #FFFFFF;
   display: flex;
   border-radius: 16px;
+  position: relative;
 }
 
 
