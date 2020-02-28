@@ -1,0 +1,11 @@
+(() => {
+  const bookmark = document.querySelector('[data-animal-id="<%= @animal.id %>"')
+  console.log(bookmark)
+  <% if @created %>
+    bookmark.querySelector('.bookmark-icon.active').classList.remove('d-none')
+    bookmark.querySelector('.bookmark-icon.inactive').classList.add('d-none')
+  <% else %>
+    bookmark.querySelector('.bookmark-icon.active').classList.add('d-none')
+    bookmark.querySelector('.bookmark-icon.inactive').classList.remove('d-none')
+  <% end %>
+})()

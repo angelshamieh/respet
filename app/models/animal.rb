@@ -3,6 +3,8 @@ class Animal < ApplicationRecord
   belongs_to :animal_status
   belongs_to :user
 
+  has_many :bookmarks
+
   validates :title, presence: true
   # validates :photos, presence: true
   validates :location, presence: true
