@@ -18,4 +18,8 @@ class User < ApplicationRecord
   def bookmark_for_animal(animal)
     bookmarks.find_by(animal: animal)
   end
+
+  def bookmarked_animals
+    Animal.joins(:bookmarks).where('bookmarks.user_id = ?', id)
+  end
 end
