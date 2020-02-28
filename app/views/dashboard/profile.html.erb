@@ -49,3 +49,37 @@
   </div>
   <% end %>
 </div>
+
+<div class="user-posts">
+  <h1><strong>My Bookmarks</strong></h1>
+  <% if @user.bookmarks.count == 0 %>
+    <p> You have no bookmarks</p>
+  <% else %>
+  <div class="user-animal-cards">
+    <% @user.bookmarked_animals.order(created_at: :desc).each do |animal| %>
+      <div class="user-animal-card">
+        <%= link_to animal_path(animal) do %>
+          <%= render 'animals/photo_placeholder', animal: animal %>
+        <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
+        <% end %>
+      <div class="animal-card-info">
+        <%= animal.title.capitalize %>
+        <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
+          <%= link_to edit_animal_path(animal) do %>
+            <i class="fas fa-pencil-alt"></i>
+        <% end %>
+        <% end %>
+      </div>
+      <div class="animal-status" data-animal-status-id="<%= animal.id %>">
+        <%= AnimalStatus.find(animal.animal_status_id).status%>
+        <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' %>
+          <%= link_to "Reunited?", update_animal_status_path(animal), method: 'patch', remote: true, data: {confirm: 'Are you sure you want to change this status?'} %>
+        <% elsif animal.animal_status.status == 'adopt' %>
+          <%= link_to "Adopted?", update_animal_status_path(animal), method: 'patch', remote: true, data: {confirm: 'Are you sure you want to change this status?'} %>
+        <% end %>
+      </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
