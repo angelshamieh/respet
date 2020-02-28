@@ -4,7 +4,6 @@
 }
 
 
-
 .icon {
   height: 56px;
   margin: 8px 8px 8px 8px;
@@ -26,7 +25,6 @@
 }
 
 
-
 .title-animal-card{
   font-size:24px;
 }
@@ -43,9 +41,6 @@
   }
 }
 
-
-
-// changes
 
 .card-animal-list {
   margin-bottom: 32px;
@@ -68,7 +63,6 @@
 }
 
 
-
 .photo-animal-card {
   width: 150px;
   height: 180px;
@@ -77,7 +71,6 @@
   object-fit: cover;
 
 }
-
 
 
 .card-info-wrap {
@@ -164,7 +157,8 @@ a.add-button{
   align-items: center;
   width: 180px;
   border-radius: 16px;
-  height: 35px;
+  height: 32px;
+  margin-left: 10px;
   button {
     border-radius: 16px;
   }
@@ -209,4 +203,7 @@ a.add-button{
   border: 3px solid #FAD00D
 }
 
-
+.gender-list-button {
+  text-decoration:none;
+  border-radius: 16px;
+}
