@@ -43,19 +43,18 @@
 
 
 .card-animal-list {
-  margin-bottom: 32px;
+  margin-bottom: 56px;
   display: flex;
   border-radius: 16px;
   justify-content: space-between;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px grey;
+  box-shadow: 8px 4px 15px rgba(0,0, 0, 0.3);
   width: 330px;
   margin-left: 25px;
 }
 
 
 .animal-card{
-  height: 160px;
+  height: 120px;
   width: 100%;
   background: #FFFFFF;
   display: flex;
@@ -70,24 +69,24 @@
   margin: -10px;
   border-radius: 16px;
   object-fit: cover;
-
+  position: absolute;
+  top: -13px;
 }
 
 
 .card-info-wrap {
-  text-align: center;
-  width: 100px;
-  margin-left:20px;
+  width: 172px;
+  position: absolute;
+  right: 5px;
+  top: 22px;
 }
 
 
 .card-gender-wrap{
-  width:60px;
-  margin-top: -3px;
-  font-size: 40px;
-  font-size: 39px;
-  margin-right: -27px;
-
+  font-size: 36px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 a.add-button{
@@ -114,20 +113,17 @@ a.add-button{
 
 .adoption-header {
   margin-left: 30px;
+  text-align: center;
 
 }
 
 .animal-location{
-  width: 140px;
   margin-top: 10px;
 }
 
 .animal-contact{
-  width: 120px;
   margin-bottom: -12px;
-  margin-top: 30px;
   font-size: 20px;
-  margin-left: 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
