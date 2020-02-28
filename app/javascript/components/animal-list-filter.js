@@ -54,6 +54,7 @@ const setupEvents = () => {
 };
 
 
+
 const initFilter = () => {
   document.addEventListener('DOMContentLoaded', () => {
     setupEvents()

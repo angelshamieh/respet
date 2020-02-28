@@ -11,7 +11,7 @@ class AnimalsController < ApplicationController
     else
       @animals = policy_scope(Animal)
     end
-    @animals = @animals.where(animal_status: @status)
+      @animals = @animals.where(animal_status: @status)
   end
 
 

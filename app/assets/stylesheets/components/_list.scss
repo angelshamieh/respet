@@ -8,9 +8,9 @@
 .icon {
   height: 56px;
   margin: 8px 8px 8px 8px;
-  border-style: outset;
   padding: 4px;
   border-radius: 8px;
+  box-shadow: 2px 1px 6px rgba(0,0,0,0.3);
 }
 
 .animal-type-icon{
@@ -205,8 +205,8 @@ a.add-button{
   font-size: 15px;
 }
 
-.animal-filter-icon.border {
-  border: 1px solid #FAD00D
+.animal-filter-icon.icon-border {
+  border: 3px solid #FAD00D
 }
 
 
