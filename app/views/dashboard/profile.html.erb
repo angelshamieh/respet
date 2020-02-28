@@ -1,7 +1,9 @@
 <div class="curved-yellow-banner">
   <div>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'black-link' %>
-    <%= link_to settings_path, class: 'settings-icon' do%>
+    <%= link_to destroy_user_session_path, method: :delete, class: 'black-link' do %>
+      <i class="fas fa-sign-out-alt"></i>
+    <% end %>
+    <%= link_to settings_path, class: 'settings-icon' do %>
       <i class="fas fa-cog"></i>
     <% end %>
   </div>
