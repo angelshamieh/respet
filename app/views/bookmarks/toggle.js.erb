@@ -1,12 +1,11 @@
-const initToggleBookmark = () => {
-  document.querySelectorAll('.bookmark').forEach((button) => {
-
-    button.addEventListener('click', (event) => {
-      if (button.data == true)
-      button.classList.remove('.active_bookmark');
-      button.classList.add('.active_bookmark')
-    });
-  })
-}
-
-export { initToggleBookmark }
+(() => {
+  const bookmark = document.querySelector('[data-animal-id="<%= @animal.id %>"')
+  console.log(bookmark)
+  <% if @created %>
+    bookmark.querySelector('.bookmark-icon.active').classList.remove('d-none')
+    bookmark.querySelector('.bookmark-icon.inactive').classList.add('d-none')
+  <% else %>
+    bookmark.querySelector('.bookmark-icon.active').classList.add('d-none')
+    bookmark.querySelector('.bookmark-icon.inactive').classList.remove('d-none')
+  <% end %>
+})()

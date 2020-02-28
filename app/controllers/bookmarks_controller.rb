@@ -5,8 +5,8 @@ class BookmarksController < ApplicationController
     if @bookmark.nil?
       @bookmark = Bookmark.new(user: current_user, animal: @animal)
       authorize @bookmark, :create?
-      @bookmark.save
       if @bookmark.save
+        @created = true
         respond_to do |format|
           format.html {  }
           format.js

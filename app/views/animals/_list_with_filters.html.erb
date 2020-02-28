@@ -40,11 +40,8 @@
           <i class="fas fa-venus"></i>
         <% end %>
     </div>
-    <%= link_to "Bookmark" animal_bookmark_path(animal),
-                class: 'bookmark',
-                data: { current_user.bookmark_for_animal(animal) }
-                method: 'post', remote: true %>
 
+    <%= render 'bookmark_link', animal: animal %>
   </div>
 <% end %>
 
