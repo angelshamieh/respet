@@ -34,6 +34,9 @@ const setupEvents = () => {
       document.querySelectorAll('.list-button').forEach((b) => {
         b.classList.remove('active')
 
+      })
+
+
       // Add 'active' class to THIS button
       button.classList.add('active')
     })
