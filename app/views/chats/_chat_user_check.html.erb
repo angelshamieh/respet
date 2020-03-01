@@ -1,0 +1,5 @@
+<% if current_user == chat.user1 %>
+  <h4><%= chat.user2.first_name.capitalize %> <%= chat.user2.last_name.capitalize %></h4>
+<% else %>
+  <h4><%= chat.user1.first_name.capitalize %> <%= chat.user1.last_name.capitalize %></h4>
+<% end %>

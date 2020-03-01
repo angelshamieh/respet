@@ -67,6 +67,9 @@
   <p><strong>About</strong></p>
   <p><%= @animal.description %></p>
 </div>
-<div class="yellow-message-button mb-3">
-  Message <%= @animal.user.first_name.capitalize %>
-</div>
+<% if current_user != @animal.user %>
+  <div class="yellow-message-button mb-3">
+    Message <%= @animal.user.first_name.capitalize %>
+    <%= link_to "", start_chat_path(@animal.user.id), class: 'absolute-0-0' %>
+  </div>
+<% end %>

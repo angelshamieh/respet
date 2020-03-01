@@ -7,7 +7,7 @@
   <% end %>
 </div>
 <div class="chat-header">
-  <h4>Chat-test</h4>
+  <%= render "chat_user_check", current_user: current_user, chat: @chat%>
 </div>
 <div class="messages">
   <% @chat.messages.each do |message| %>
@@ -20,11 +20,6 @@
     <%= f.input :content, label: false, placeholder: 'Message...' %>
   <% end %>
 </div>
-
-
-
-
-
 <% content_for :after_js do %>
   <script>
     scrollLastMessageIntoView();
