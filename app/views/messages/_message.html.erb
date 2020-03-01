@@ -1,0 +1,8 @@
+<div class="message <%= user_is_messages_author ? "right" : "" %>">
+  <div class="message-avatar">
+    <%= render "dashboard/avatar_placeholder", user: message.user %>
+  </div>
+  <div class="message-content"><%= message.content %></div>
+</div>
+
+

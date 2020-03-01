@@ -1,0 +1,25 @@
+<div class="show-header">
+  <%= link_to @back_url do%>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+  <%= link_to root_path do%>
+    <%= image_tag "logo.png" %>
+  <% end %>
+</div>
+ <div class="index-header">
+  <h4>All Messages</h4>
+ </div>
+
+ <div class="chats-container">
+  <% @chats.each do |chat| %>
+    <div class="chat-card">
+     <p>Avatar</p>
+     <div class="chat-content">
+       <h3>User Name</h3>
+       <p>Message</p>
+     </div>
+     <p>Time</p>
+      <%= link_to "", chat_path(chat), class: "absolute-0-0" %>
+    </div>
+  <% end %>
+ </div>

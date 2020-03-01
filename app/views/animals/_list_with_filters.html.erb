@@ -27,17 +27,10 @@
          <p class='animal-location-padding'><i class="fas fa-map-marker-alt"></i> <%= animal.location.capitalize %></p>
         </div>
       </div>
-      <div class="card-gender-wrap">
-        <%if animal.gender == 'male'%>
-          <i class="fas fa-mars"></i>
-        <%else %>
-            <i class="fas fa-venus"></i>
-        <% end %>
-      </div>
       <%= link_to "", animal_path(animal), class: "absolute-0-0"  %>
+    <%= render 'bookmark_link', animal: animal %>
     </div>
 
-    <%= render 'bookmark_link', animal: animal %>
   </div>
 <% end %>
 </div>
