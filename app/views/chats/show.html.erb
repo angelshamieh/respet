@@ -1,20 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <div class="chat-header"><h4>Chat-test</h4></div>
-      <div class="messages">
-        <% @chat.messages.each do |message| %>
-          <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
-        <% end %>
-      </div>
-      <div id="create-message">
-        <%= simple_form_for [ @chat, Message.new ], remote: true, html: {autocomplete: "off" } do |f| %>
-          <%= f.input :content, label: false %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<div class="show-header">
+  <%= link_to @back_url do%>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+  <%= link_to root_path do%>
+    <%= image_tag "logo.png" %>
+  <% end %>
 </div>
+<div class="chat-header">
+  <h4>Chat-test</h4>
+</div>
+<div class="messages">
+  <% @chat.messages.each do |message| %>
+    <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
+  <% end %>
+</div>
+<div id="create-message">
+  <%= image_tag "login-banner.png", class: 'chat-dog' %>
+  <%= simple_form_for [ @chat, Message.new ], remote: true, html: {autocomplete: "off" } do |f| %>
+    <%= f.input :content, label: false, placeholder: 'Message...' %>
+  <% end %>
+</div>
+
+
+
+
+
 <% content_for :after_js do %>
   <script>
     scrollLastMessageIntoView();
