@@ -1,4 +1,4 @@
-§import { filterAnimals } from './animal-lists'
+import { filterAnimals } from './animal-lists'
 
 const toggleActiveAnimal = (animal) => {
     let buttons = document.querySelectorAll('.animal-filter-icon');
@@ -29,13 +29,11 @@ const setupEvents = () => {
 
   document.querySelectorAll('.list-button').forEach((button) => {
     button.addEventListener("click", () =>  {
-      event.preventDefault()
+      // event.preventDefault()
       // Remove 'active' class from other buttons
       document.querySelectorAll('.list-button').forEach((b) => {
         b.classList.remove('active')
-
       })
-
 
       // Add 'active' class to THIS button
       button.classList.add('active')
