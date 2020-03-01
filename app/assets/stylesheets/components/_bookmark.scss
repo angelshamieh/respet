@@ -3,3 +3,15 @@
   font-size: 30px;
   margin-right: 16px;
 }
+
+.bookmark {
+  z-index: 1000;
+  position: absolute;
+  top: -9px;
+  right: 6px;
+
+}
+
+.bookmark-icon.inactive {
+  color: rgba(220, 220, 220, 0.7)
+}

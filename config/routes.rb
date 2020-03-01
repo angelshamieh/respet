@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   end
   resources :medical_centers, only: :index
 
+  resources :chats, only: [:index, :show] do
+    resources :messages, only: [:create]
+  end
 
   get 'dashboard', to: 'dashboard#profile', as: :dashboard
   get 'settings', to: 'dashboard#settings', as: :settings

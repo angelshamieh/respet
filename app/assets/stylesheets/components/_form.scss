@@ -1,0 +1,63 @@
+
+input.yellow-form-button {
+  background-color: #FAD00D;
+  border-radius: 11px;
+  text-align: center;
+  box-shadow: 2px 2px 4px grey;
+  padding: 8px 50px;
+  color: white;
+  width:100%;
+}
+
+
+.new_animal {
+  label {
+    img {
+      width: 55px;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.horizontal {
+  label {
+    opacity: 0.7;
+  }
+  input[type=radio]:checked + label {
+    opacity: 1;
+  }
+}
+
+#animal_title {
+  border-radius: 15px;
+}
+
+#animal_location{
+  border-radius: 15px;
+
+}
+
+#animal_breed{
+  border-radius: 15px;
+
+}
+
+#animal_age{
+  border-radius: 15px;
+
+}
+
+#animal_description{
+  border-radius: 15px;
+
+}
+
+
+.logo-form{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    margin-top: -8px;
+  }

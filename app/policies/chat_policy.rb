@@ -1,12 +1,15 @@
-class MessagePolicy < ApplicationPolicy
+class ChatPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def create?
+  def index?
     true
   end
 
+  def show?
+    true
+  end
 end

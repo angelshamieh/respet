@@ -1,11 +1,13 @@
-<% has_bookmark = !current_user.bookmark_for_animal(animal).nil? %>
+<% if current_user %>
+  <% has_bookmark = !current_user.bookmark_for_animal(animal).nil? %>
 
-<%= link_to(animal_bookmark_path(animal),
-            class: 'bookmark',
-            data: {
-              animal_id: animal.id
-            },
-            method: 'post', remote: true) do %>
-  <div class="bookmark-icon active <%= has_bookmark ? '' : 'd-none' %>"><i class="fas fa-bookmark"></i></div>
-  <div class="bookmark-icon inactive <%= has_bookmark ? 'd-none' : '' %>"><i class="far fa-bookmark"></i></div>
+  <%= link_to(animal_bookmark_path(animal),
+              class: 'bookmark',
+              data: {
+                animal_id: animal.id
+              },
+              method: 'post', remote: true) do %>
+    <div class="bookmark-icon active <%= has_bookmark ? '' : 'd-none' %>"><i class="fas fa-bookmark"></i></div>
+    <div class="bookmark-icon inactive <%= has_bookmark ? 'd-none' : '' %>"><i class="fas fa-bookmark"></i></div>
+  <% end %>
 <% end %>

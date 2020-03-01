@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_many :animals, dependent: :destroy
   has_many :bookmarks
 
@@ -17,5 +17,9 @@ class User < ApplicationRecord
 
   def bookmark_for_animal(animal)
     bookmarks.find_by(animal: animal)
+  end
+
+  def bookmarked_animals
+    Animal.joins(:bookmarks).where('bookmarks.user_id = ?', id)
   end
 end
