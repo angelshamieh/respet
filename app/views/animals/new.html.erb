@@ -1,24 +1,27 @@
+ <%= link_to @back_url do%>
+    <%= image_tag "logo.png" class: "logo-form"%>
+  <% end %>
+
 <div class="container mt-5">
 <%= simple_form_for @animal do |f| %>
   <% if params[:status] %>
     <%= hidden_field_tag "status", params[:status] %>
   <% end %>
-  <%= f.input :photos %>
-  <%#= f.input :photo_cache, as: :hidden %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.label :animal_type %>
+
+  <%= f.input :photos, as: :file, label_html: {class: "fas fa-cloud-upload-alt"}%>
+  <%#= f.label :animal_type %>
   <%= f.collection_radio_buttons(:title, [['Dog', 'dog'], ['Bird', 'bird'], ['Rabbit', 'rabbit'], ['Cat', 'khao-manee-cat']],
                              :first, :last,
                              :item_wrapper_class => 'horizontal',
                              ) { |title| title.label { image_tag("#{title.text}.svg")} + title.radio_button }%>
   <%= f.input :gender, as: :radio_buttons, collection: ['Male', 'Female'] %>
-  <%= f.input :title %>
-  <%= f.input :location %>
-  <%= f.input :breed %>
-  <%= f.input :age %>
-  <%= f.input :description %>
+  <%= f.input :title, placeholder: 'Name', label: false  %>
+  <%= f.input :location, placeholder: 'Where did u find the animal?', label: false %>
+  <%= f.input :breed, placeholder: 'Breed', label: false %>
+  <%= f.input :age, placeholder: 'Age', label: false %>
+  <%= f.input :description, placeholder: 'Description', label: false %>
 
-  <%= f.submit "Submit", class: "btn btn-primary " %>
+  <%= f.submit "Add Pet", class: "yellow-form-button "  %>
 <% end %>
 </div>
 

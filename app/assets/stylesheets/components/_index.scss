@@ -6,20 +6,5 @@
 @import "navbar";
 @import "list";
 @import "map";
+@import "form";
 
-.new_animal {
-  label {
-    img {
-      width: 55px;
-    }
-  }
-}
-
-.horizontal {
-  label {
-    opacity: 0.4;
-  }
-  input[type=radio]:checked + label {
-    opacity: 1;
-  }
-}
