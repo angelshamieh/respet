@@ -13,12 +13,16 @@
  <div class="chats-container">
   <% @chats.each do |chat| %>
     <div class="chat-card">
-     <p>Avatar</p>
+      <% if current_user == chat.user1 %>
+        <%= render "dashboard/avatar_placeholder", user: chat.user2 %>
+      <% else %>
+        <%= render "dashboard/avatar_placeholder", user: chat.user1 %>
+      <% end %>
      <div class="chat-content">
-       <h3>User Name</h3>
-       <p>Message</p>
+       <h4><%= render "chat_user_check", current_user: current_user, chat: chat %></h4>
+       <p><%= chat.messages.last.content %></p>
      </div>
-     <p>Time</p>
+     <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
       <%= link_to "", chat_path(chat), class: "absolute-0-0" %>
     </div>
   <% end %>

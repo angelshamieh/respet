@@ -20,6 +20,11 @@
     color: #767575;
 
   }
+  img {
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .chat-content {
