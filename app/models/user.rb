@@ -22,4 +22,17 @@ class User < ApplicationRecord
   def bookmarked_animals
     Animal.joins(:bookmarks).where('bookmarks.user_id = ?', id)
   end
+
+  def chats
+    Chat.where(user1: self).or(Chat.where(user2: self))
+  end
+
+  def chat_with!(user)
+    chat = (Chat.where(user1: self, user2: user).or(
+      Chat.where(user1: user, user2: self))).first
+    if chat.nil?
+      chat = Chat.create!(user1: self, user2: user)
+    end
+    chat
+  end
 end

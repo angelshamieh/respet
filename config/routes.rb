@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   patch 'animals/:id/update_status', to: 'animals#update_status', as: :update_animal_status
 
+  get 'start_chat/:user_id', to: 'chats#start_chat', as: :start_chat
+
 end
