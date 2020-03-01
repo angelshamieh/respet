@@ -13,7 +13,7 @@
     <%= hidden_field_tag "status", params[:status] %>
   <% end %>
 
-  <%= f.input :photos, as: :file, label_html: {class: "fas fa-cloud-upload-alt"}%>
+  <%= f.input :photos, as: :file,  label: false, wrapper_html: { class: 'fas fa-cloud-upload-alt' }%>
   <%= f.collection_radio_buttons(:title, [['Dog', 'dog'], ['Bird', 'bird'], ['Rabbit', 'rabbit'], ['Cat', 'khao-manee-cat']],
                              :first, :last,
                              :item_wrapper_class => 'horizontal',
@@ -26,6 +26,8 @@
   <%= f.input :description, placeholder: 'Description', label: false %>
 
   <%= f.submit "Add Pet", class: "yellow-form-button "  %>
+  <%= f.button :button, "Reset", type: "reset", class: "btn-outline-secondary" %>
+
 <% end %>
 </div>
 
