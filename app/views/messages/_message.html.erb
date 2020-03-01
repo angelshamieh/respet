@@ -1,0 +1,4 @@
+<div class="message <%= message.form?(current_user) ? "right" : "" %>">
+  <%= render "dashboard/avatar_placeholder", class: "message-avatar" %>
+  <div class="message-content"><%= message.content %></div>
+</div>
