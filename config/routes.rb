@@ -21,4 +21,6 @@ Rails.application.routes.draw do
 
   get 'start_chat/:user_id', to: 'chats#start_chat', as: :start_chat
 
+  mount ActionCable.server => "/cable"
+
 end

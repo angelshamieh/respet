@@ -1,4 +1,4 @@
-import { filterAnimals } from './animal-lists'
+§import { filterAnimals } from './animal-lists'
 
 const toggleActiveAnimal = (animal) => {
     let buttons = document.querySelectorAll('.animal-filter-icon');
