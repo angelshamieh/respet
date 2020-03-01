@@ -14,7 +14,7 @@
   <%= f.collection_radio_buttons(:title, [['Dog', 'dog'], ['Bird', 'bird'], ['Rabbit', 'rabbit'], ['Cat', 'khao-manee-cat']],
                              :first, :last,
                              :item_wrapper_class => 'horizontal',
-                             ) { |title| title.label { image_tag("#{title.text}.svg") + title.radio_button} }%>
+                             ) { |title| title.label { image_tag("#{title.text}.svg")} + title.radio_button }%>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Submit", class: "btn btn-primary " %>
 <% end %>
