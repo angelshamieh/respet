@@ -16,15 +16,21 @@
   &.right {
     flex-direction: row-reverse;
     .message-content {
-      background-color: #F2F9FC;
+      background-color: #E5E5E5;
+      color: black;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 0;
     }
   }
 }
 .message-content {
-  background-color: #F7F7F7;
-  border-radius: 3px;
+  background-color: #8A8A8A;
+  color: white;
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
   margin: 0 10px;
-  padding: 11px 10px 8px 10px;
+  padding: 12px 12px 12px 16px;
 }
 .avatar {
   width: 42px;
@@ -36,8 +42,23 @@
   padding: 10px;
   background-color: #ffffff;
   margin-bottom: 20px;
-  border: 1px solid #ececec;
+  margin-top: 16px;
+  position: relative;
 }
+
+.chat-dog {
+  position: absolute;
+  width: 40px;
+  right: 25px;
+  top: -25px;
+}
+
+#message_content {
+  background-color: rgba(250,209,51,0.3);
+  border-radius: 16px;
+  border: 0;
+}
+
 .message_content {
   margin-bottom: 0;
 }
@@ -53,12 +74,13 @@ input.form-control {
   }
 }
 .chat-header {
-  background-color: #4F2F4C;
+  background-color: #FAD00D;
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
   h4 {
     margin: 0;
+    text-align: center;
   }
 }
 
@@ -69,3 +91,4 @@ input.form-control {
 
   }
 }
+
