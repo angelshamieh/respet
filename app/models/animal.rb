@@ -5,7 +5,7 @@ class Animal < ApplicationRecord
 
   has_many :bookmarks
 
-  validates :title, presence: true
+  validates :title, presence: true, length: {maximum: 15}
   # validates :photos, presence: true
   validates :location, presence: true
   validates :description, presence: true
