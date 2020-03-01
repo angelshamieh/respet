@@ -9,7 +9,7 @@ class Animal < ApplicationRecord
   # validates :photos, presence: true
   validates :location, presence: true
   validates :description, presence: true
-  validates :gender, inclusion: { in: %w(male female), message: "must be male or female"}
+  validates :gender, inclusion: { in: %w(Male Female), message: "must be Male or Female"}
 
   has_many_attached :photos
 
