@@ -5,8 +5,8 @@ input.yellow-form-button {
   text-align: center;
   box-shadow: 2px 2px 4px grey;
   padding: 8px 50px;
-  margin: 0 40px;
   color: white;
+  width:100%;
 }
 
 
@@ -22,7 +22,7 @@ input.yellow-form-button {
 
 .horizontal {
   label {
-    opacity: 0.4;
+    opacity: 0.7;
   }
   input[type=radio]:checked + label {
     opacity: 1;

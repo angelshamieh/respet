@@ -1,6 +1,11 @@
- <%= link_to @back_url do%>
-    <%= image_tag "logo.png" class: "logo-form"%>
+<div class="show-header">
+  <%= link_to @back_url do%>
+    <i class="fas fa-arrow-left"></i>
   <% end %>
+  <%= link_to root_path do%>
+    <%= image_tag "logo.png" %>
+  <% end %>
+</div>
 
 <div class="container mt-5">
 <%= simple_form_for @animal do |f| %>
@@ -9,7 +14,6 @@
   <% end %>
 
   <%= f.input :photos, as: :file, label_html: {class: "fas fa-cloud-upload-alt"}%>
-  <%#= f.label :animal_type %>
   <%= f.collection_radio_buttons(:title, [['Dog', 'dog'], ['Bird', 'bird'], ['Rabbit', 'rabbit'], ['Cat', 'khao-manee-cat']],
                              :first, :last,
                              :item_wrapper_class => 'horizontal',
