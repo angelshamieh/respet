@@ -43,7 +43,7 @@ Rails.application.configure do
   config.active_storage.service = :cloudinary
 
   # Mount Action Cable outside main process or domain
-  # config.action_cable.mount_path = nil
+  config.action_cable.mount_path = '/cable'
   config.action_cable.url = 'wss://respet.online/cable'
   config.action_cable.allowed_request_origins = [ "http://www.respet.online", "https://www.respet.online" ]
 
