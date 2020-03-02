@@ -19,7 +19,7 @@
   <p><%= "post".pluralize @user.animals.size %></p>
 </div>
 <div class="user-posts">
-  <h1><strong>My Posts</strong></h1>
+  <h1 class=profile-titles>My Posts</h1>
   <% if @user.animals.empty? %>
     <p> You have no posts</p>
   <% else %>
@@ -52,7 +52,7 @@
 </div>
 
 <div class="user-posts">
-  <h1><strong>My Bookmarks</strong></h1>
+  <h1 class='profile-titles'>My Bookmarks</h1>
   <% if @user.bookmarks.count == 0 %>
     <p> You have no bookmarks</p>
   <% else %>
