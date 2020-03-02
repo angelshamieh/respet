@@ -31,12 +31,6 @@
   }
 }
 
-.settings-icon {
-  position: absolute;
-  right: 6px;
-  font-size: 24px;
-  color:black;
-}
 
 .user-animal-cards {
   display:flex;
@@ -88,13 +82,21 @@
 }
 
 .black-link {
-  margin-left: 8px;
+  font-size: 26px;
+  color:black;
+  // position: absolute;
+  // right: 6px;
+}
+
+.settings-icon {
   font-size: 26px;
   color:black;
 }
 
-
-
+.profile-links {
+  display: flex;
+  justify-content: space-between;
+}
 
 
 

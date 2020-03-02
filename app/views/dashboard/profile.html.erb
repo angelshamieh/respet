@@ -1,10 +1,10 @@
 <div class="curved-yellow-banner">
-  <div>
-    <%= link_to destroy_user_session_path, method: :delete, class: 'black-link' do %>
-      <i class="fas fa-sign-out-alt"></i>
-    <% end %>
+  <div class='profile-links'>
     <%= link_to settings_path, class: 'settings-icon' do %>
       <i class="fas fa-cog"></i>
+    <% end %>
+    <%= link_to destroy_user_session_path, method: :delete, class: 'black-link' do %>
+      <i class="fas fa-sign-out-alt"></i>
     <% end %>
   </div>
   <div class="user-avatar-small-circle">
