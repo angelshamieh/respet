@@ -15,8 +15,14 @@
   </div>
 </div>
 <div class="user-post-count">
-  <h2><%= @user.animals.size %></h2>
-  <p><%= "post".pluralize @user.animals.size %></p>
+  <div>
+    <h2><%= @user.animals.size %></h2>
+    <p><%= "post".pluralize @user.animals.size %></p>
+  </div>
+   <div>
+    <h2><%= @user.bookmarks.size %></h2>
+    <p><%= "bookmark".pluralize @user.bookmarks.size %></p>
+  </div>
 </div>
 <div class="user-posts">
   <h1 class=profile-titles>My Posts</h1>
