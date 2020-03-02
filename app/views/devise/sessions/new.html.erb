@@ -1,5 +1,9 @@
-<%= image_tag "logo-respet.png", class: 'login-logo' %>
-
+<div class="header-logo">
+  <%= image_tag "logo-respet.png", class: 'login-logo' %>
+  <div>
+    <%= link_to "", root_path, class: "absolute-0-0" %>
+  </div>
+</div>
 <div class="login-form">
   <%= image_tag "banner1.png", id: 'login-banner' %>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
