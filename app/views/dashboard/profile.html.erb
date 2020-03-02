@@ -28,10 +28,9 @@
       <div class="user-animal-card">
         <%= link_to animal_path(animal) do %>
           <%= render 'animals/photo_placeholder', animal: animal %>
-        <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
         <% end %>
       <div class="animal-card-info">
-        <%= animal.title.capitalize %>
+        <p class='animal-card-title'><%= animal.title.capitalize %></p>
         <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
           <%= link_to edit_animal_path(animal) do %>
             <i class="fas fa-pencil-alt"></i>
@@ -65,7 +64,7 @@
         <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
         <% end %>
       <div class="animal-card-info">
-        <%= animal.title.capitalize %>
+        <p class="animal-card-title"><%= animal.title.capitalize %></p>
         <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
           <%= link_to edit_animal_path(animal) do %>
             <i class="fas fa-pencil-alt"></i>
