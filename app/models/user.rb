@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :location, presence: true
-  validates :bookmarks, uniqueness: { scope: :animal }
+  # validates :bookmarks, uniqueness: { scope: :animal }
 
   has_one_attached :avatar
 

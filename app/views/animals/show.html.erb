@@ -42,6 +42,7 @@
 <div class="animal-show-details">
   <div class="animal-name">
     <h1><%= @animal.title %></h1>
+    <%= render 'bookmark_link', animal: @animal %>
   </div>
   <% if @animal_status == 'adopt'  %>
     <div><%= @animal.breed.capitalize %>, <%= pluralize @animal.age, 'year' %> old </div>
