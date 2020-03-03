@@ -3,8 +3,7 @@
   <%= f.input :title %>
   <%= f.input :breed %>
   <%= f.input :age %>
-  <%= f.input :gender %>
-  <%= f.input :location %>
+  <%= f.input :gender, as: :radio_buttons, collection: ['Male', 'Female'] %>  <%= f.input :location %>
   <%= f.input :description %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
