@@ -31,6 +31,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
+    @animal.animal_type = AnimalType.find_by(name: params[:animal][:animal_type])
     @animal.animal_status = AnimalStatus.find_by status: params[:status]
     @animal.user = current_user
     authorize @animal
