@@ -1,10 +1,13 @@
 <div class="curved-yellow-banner">
   <div class="adopt-header">
-  <h3><strong><u>ADOPT AN ANIMAL <%= image_tag 'login-banner.png', class: 'image-adoption' %></u></strong></h3>
-    <p class="add-adoption"><i class="fas fa-plus"></i> <%= link_to "Post a pet for Adoption?", new_animal_path(status: 'adopt'), class: 'add-button' %></p>
+    <h3>ADOPT AN ANIMAL</h3>
+    <%= image_tag 'login-banner.png', class: 'image-adoption' %>
+  </div>
+  <div class="add-adoption">
+    <p><i class="fas fa-plus"></i> <%= link_to "Post a pet for Adoption?", new_animal_path(status: 'adopt'), class: 'add-button' %></p>
   </div>
 
-  <div class='adoption-header'>
+  <div class='adoption-filters'>
     <p class="filter-by-pet-header"><strong>Filter by gender</strong></p>
       <div class="gender-buttons">
         <a class="gender-list-button list-button" data-animal-gender='female'> Female</a>
