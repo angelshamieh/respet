@@ -27,6 +27,8 @@ class AnimalsController < ApplicationController
   def new
     @animal = Animal.new
     authorize @animal
+    @back_url = session[:my_previous_url] = URI(request.referer).path
+
   end
 
   def create
