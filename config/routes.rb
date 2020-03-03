@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  mount ActionCable.server => "/cable"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :animals, except: :destroy do
     # resources :bookmarks, only: %i[create destroy]
@@ -21,6 +22,5 @@ Rails.application.routes.draw do
 
   get 'start_chat/:user_id', to: 'chats#start_chat', as: :start_chat
 
-  mount ActionCable.server => "/cable"
 
 end
