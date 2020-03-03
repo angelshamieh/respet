@@ -1,10 +1,10 @@
 <div class="curved-yellow-banner">
-  <div>
-    <%= link_to destroy_user_session_path, method: :delete, class: 'black-link' do %>
-      <i class="fas fa-sign-out-alt"></i>
-    <% end %>
+  <div class='profile-links'>
     <%= link_to settings_path, class: 'settings-icon' do %>
       <i class="fas fa-cog"></i>
+    <% end %>
+    <%= link_to destroy_user_session_path, method: :delete, class: 'black-link' do %>
+      <i class="fas fa-sign-out-alt"></i>
     <% end %>
   </div>
   <div class="user-avatar-small-circle">
@@ -15,11 +15,17 @@
   </div>
 </div>
 <div class="user-post-count">
-  <h2><%= @user.animals.size %></h2>
-  <p><%= "post".pluralize @user.animals.size %></p>
+  <div>
+    <h2><%= @user.animals.size %></h2>
+    <p><%= "post".pluralize @user.animals.size %></p>
+  </div>
+   <div>
+    <h2><%= @user.bookmarks.size %></h2>
+    <p><%= "bookmark".pluralize @user.bookmarks.size %></p>
+  </div>
 </div>
 <div class="user-posts">
-  <h1><strong>My Posts</strong></h1>
+  <h1 class=profile-titles>My Posts</h1>
   <% if @user.animals.empty? %>
     <p> You have no posts</p>
   <% else %>
@@ -28,10 +34,9 @@
       <div class="user-animal-card">
         <%= link_to animal_path(animal) do %>
           <%= render 'animals/photo_placeholder', animal: animal %>
-        <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
         <% end %>
       <div class="animal-card-info">
-        <%= animal.title.capitalize %>
+        <p class='animal-card-title'><%= animal.title.capitalize %></p>
         <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
           <%= link_to edit_animal_path(animal) do %>
             <i class="fas fa-pencil-alt"></i>
@@ -53,7 +58,7 @@
 </div>
 
 <div class="user-posts">
-  <h1><strong>My Bookmarks</strong></h1>
+  <h1 class='profile-titles'>My Bookmarks</h1>
   <% if @user.bookmarks.count == 0 %>
     <p> You have no bookmarks</p>
   <% else %>
@@ -65,7 +70,7 @@
         <%#= cl_image_tag animal.photos.first.key, height: 300, width: 400, crop: :fill%>
         <% end %>
       <div class="animal-card-info">
-        <%= animal.title.capitalize %>
+        <p class="animal-card-title"><%= animal.title.capitalize %></p>
         <% if animal.animal_status.status == 'lost' || animal.animal_status.status == 'found' || animal.animal_status.status == 'adopt'%>
           <%= link_to edit_animal_path(animal) do %>
             <i class="fas fa-pencil-alt"></i>

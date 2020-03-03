@@ -9,11 +9,10 @@
   margin: 8px 8px 8px 8px;
   padding: 4px;
   border-radius: 8px;
-  box-shadow: 2px 1px 6px rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .animal-type-icon{
-  margin-left: 12px;
   display: flex;
   justify-content: center;
   margin-bottom: 12px;
@@ -29,9 +28,7 @@
   font-size:24px;
 }
 
-.image-adoption{
-  width:50px;
-}
+
 
 .curved-yellow-banner {
 
@@ -43,11 +40,10 @@
 
 
 .card-animal-list {
-  margin-bottom: 56px;
+  margin: 32px 0 56px 0;
   display: flex;
   border-radius: 16px;
   justify-content: space-between;
-  box-shadow: 8px 4px 15px rgba(0,0, 0, 0.3);
   width: 330px;
   margin-left: 25px;
 }
@@ -58,6 +54,7 @@
   width: 100%;
   background: #FFFFFF;
   display: flex;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   position: relative;
 }
@@ -65,12 +62,13 @@
 
 .photo-animal-card {
   width: 150px;
-  height: 180px;
-  margin: -10px;
+  height: 160px;
   border-radius: 16px;
   object-fit: cover;
   position: absolute;
-  top: -13px;
+  top: -15px;
+  left: -10px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -103,10 +101,27 @@ a.add-button{
   }
 }
 
-.adoption-header {
-  margin-left: 30px;
-  text-align: center;
+.adoption-filters {
+  margin-left: 48px;
+}
 
+.adopt-header {
+  // position: relative;
+  display: flex;
+  border-bottom: 2px solid white;
+  padding-top: 32px;
+  margin: 0 48px;
+  h3 {
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.image-adoption{
+  width: 48px;
+  position: absolute;
+  top: 20px;
+  right: 46px;
 }
 
 .animal-location{
@@ -134,8 +149,9 @@ a.add-button{
 }
 
 .filter-by-pet-header{
-  font-size:16px;
-  margin-left:12px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  margin-left: 36px;
 }
 
 
@@ -147,7 +163,6 @@ a.add-button{
   width: 180px;
   border-radius: 16px;
   height: 32px;
-  margin-left: 10px;
   button {
     border-radius: 16px;
   }
@@ -183,13 +198,16 @@ a.add-button{
 }
 
 .add-adoption{
-  margin-left: 36px;
-  margin-top: -35px;
+  margin: 8px 48px 0 48px;
   font-size: 15px;
 }
 
 .animal-filter-icon.icon-border {
   border: 3px solid #FAD00D
+}
+
+.animal-filters {
+  margin-top: -24px;
 }
 
 .gender-list-button {

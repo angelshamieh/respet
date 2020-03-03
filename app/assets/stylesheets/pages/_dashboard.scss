@@ -20,23 +20,27 @@
   width: 85%;
   margin: -78px auto 0 auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+
+  div {
+    margin: 0 16px;
+  }
 
   h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
+    margin: 0px;
+    margin-top: 8px;
   }
 
   p {
     text-align: center;
+    margin: 0px;
+    font-size: 12px;
   }
 }
 
-.settings-icon {
-  position: absolute;
-  right: 6px;
-  font-size: 24px;
-  color:black;
-}
 
 .user-animal-cards {
   display:flex;
@@ -45,6 +49,7 @@
 .animal-card-info {
   display:flex;
   justify-content: space-between;
+  padding: 0 12px;
 
   a {
     color: black;
@@ -53,7 +58,7 @@
 
 .user-animal-card {
   border-radius: 50px;
-  box-shadow: 5px 8px 8px -6px grey;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
   margin-right: 16px;
 
@@ -85,18 +90,44 @@
 
 .user-posts {
   padding-left: 24px;
+  margin-top: 12px;
 }
 
 .black-link {
-  margin-left: 8px;
+  font-size: 26px;
+  color:black;
+  // position: absolute;
+  // right: 6px;
+}
+
+.settings-icon {
   font-size: 26px;
   color:black;
 }
 
+.profile-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
 
+.animal-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
 
+.animal-status {
+  font-size: 12px;
+  font-weight: 400;
+  color: #767575;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
 
-
-
-
+.profile-titles {
+  font-size: 32px;
+  font-weight: 600;
+}
 
