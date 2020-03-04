@@ -20,10 +20,18 @@
         <% end %>
         <div class="chat-content">
           <h4><%= render "chat_user_check", current_user: current_user, chat: chat %></h4>
-          <p><%= chat.messages.last.content %></p>
+          <% if chat.messages.last.nil? %>
+            <p class=placeholder> </p>
+          <% else %>
+            <p><%= chat.messages.last.content %></p>
+          <% end %>
         </div>
         <div>
-          <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
+          <% if chat.messages.last.nil? %>
+            <p class=placeholder> </p>
+          <% else %>
+            <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
+          <% end %>
           <p class=placeholder> </p>
         </div>
         <%= link_to "", chat_path(chat), class: "absolute-0-0" %>
