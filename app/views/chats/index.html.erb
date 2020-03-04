@@ -8,22 +8,26 @@
  </div>
 
  <div class="chats-container">
-  <% @chats.each do |chat| %>
-    <div class="chat-card">
-      <% if current_user == chat.user1 %>
-        <%= render "dashboard/avatar_placeholder", user: chat.user2 %>
-      <% else %>
-        <%= render "dashboard/avatar_placeholder", user: chat.user1 %>
-      <% end %>
-      <div class="chat-content">
-        <h4><%= render "chat_user_check", current_user: current_user, chat: chat %></h4>
-        <p><%= chat.messages.last.content %></p>
+  <% if @chats.last.nil? %>
+    <p style="text-align: center; margin-top: 18px;">You don't have any messages right now:(</p>
+  <% else %>
+    <% @chats.each do |chat| %>
+      <div class="chat-card">
+        <% if current_user == chat.user1 %>
+          <%= render "dashboard/avatar_placeholder", user: chat.user2 %>
+        <% else %>
+          <%= render "dashboard/avatar_placeholder", user: chat.user1 %>
+        <% end %>
+        <div class="chat-content">
+          <h4><%= render "chat_user_check", current_user: current_user, chat: chat %></h4>
+          <p><%= chat.messages.last.content %></p>
+        </div>
+        <div>
+          <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
+          <p class=placeholder> </p>
+        </div>
+        <%= link_to "", chat_path(chat), class: "absolute-0-0" %>
       </div>
-      <div>
-        <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
-        <p class=placeholder> </p>
-      </div>
-      <%= link_to "", chat_path(chat), class: "absolute-0-0" %>
-    </div>
+    <% end %>
   <% end %>
  </div>
