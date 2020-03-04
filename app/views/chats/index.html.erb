@@ -18,11 +18,14 @@
       <% else %>
         <%= render "dashboard/avatar_placeholder", user: chat.user1 %>
       <% end %>
-     <div class="chat-content">
-       <h4><%= render "chat_user_check", current_user: current_user, chat: chat %></h4>
-       <p><%= chat.messages.last.content %></p>
-     </div>
-     <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
+      <div class="chat-content">
+        <h4><%= render "chat_user_check", current_user: current_user, chat: chat %></h4>
+        <p><%= chat.messages.last.content %></p>
+      </div>
+      <div>
+        <p><%= chat.messages.last.created_at.strftime("%B, %d, %Y") %></p>
+        <p class=placeholder> </p>
+      </div>
       <%= link_to "", chat_path(chat), class: "absolute-0-0" %>
     </div>
   <% end %>
