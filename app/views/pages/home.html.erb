@@ -16,7 +16,7 @@
     <% if current_user.nil? %>
       <h3><%= image_tag "problem.svg", alt: "alttext" %> Latest lost PET</h3>
     <% else %>
-      <h3><%= image_tag "problem.svg", alt: "alttext" %> Lost PET near you</h3>
+      <h3><%= image_tag "problem.svg", alt: "alttext" %> Lost PETS near you</h3>
     <% end %>
     <%= link_to "see all", animals_path(status: :lost) %>
   </div>

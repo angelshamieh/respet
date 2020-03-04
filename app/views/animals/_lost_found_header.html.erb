@@ -13,7 +13,7 @@
     <%= form_tag animals_path, method: :get, class: 'form-inline' do %>
     <div class="input-group">
       <%= text_field_tag :query, params[:query],
-        class: "form-control",
+        class: "form-control search-heigh",
         placeholder: "Search for a pet.."
       %>
       <%= hidden_field_tag :status, params[:status] %>
