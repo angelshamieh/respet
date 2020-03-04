@@ -43,6 +43,16 @@
   }
 }
 
+
+.chat-index-header {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+  width: 56px;
+  }
+}
+
 .placeholder {
   height: 18px;
   width: 24px;
