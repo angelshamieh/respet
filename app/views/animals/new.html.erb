@@ -24,7 +24,7 @@
   <%= f.input :breed, placeholder: 'Breed', label: false %>
   <%= f.input :age, placeholder: 'Age', label: false %>
   <%= f.input :description, placeholder: 'Description', label: false %>
-  <%= f.input :photos, as: :file, label: false %>
+  <%= f.input :photos, as: :file, label: false, input_html: { multiple: true } %>
 
   <%= f.submit "Add Pet", class: "yellow-form-button "  %>
 
