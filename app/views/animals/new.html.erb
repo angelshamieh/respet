@@ -14,20 +14,20 @@
   <% end %>
 
 
-  <%= f.input :photos, as: :file,  label: false, wrapper_html: { class: 'fas fa-cloud-upload-alt' }%>
   <%= f.collection_radio_buttons(:animal_type, [['dog', 'dog'], ['bird', 'bird'], ['rabbit', 'rabbit'], ['cat', 'khao-manee-cat']],
                              :first, :last,
                              :item_wrapper_class => 'horizontal',
                              ) { |animal_type| animal_type.label { image_tag("#{animal_type.text}.svg")} + animal_type.radio_button }%>
   <%= f.input :gender, as: :radio_buttons, collection: ['Male', 'Female'] %>
   <%= f.input :title, placeholder: 'Name', label: false  %>
-  <%= f.input :location, placeholder: 'Where did u find the animal?', label: false %>
+  <%= f.input :location, placeholder: 'Where did you find the animal?', label: false %>
   <%= f.input :breed, placeholder: 'Breed', label: false %>
   <%= f.input :age, placeholder: 'Age', label: false %>
   <%= f.input :description, placeholder: 'Description', label: false %>
+  <%= f.input :photos, as: :file, label: false %>
 
   <%= f.submit "Add Pet", class: "yellow-form-button "  %>
-  <%= f.button :button, "Reset", type: "reset", class: "btn-outline-secondary" %>
+  <%#= f.button :button, "Reset", type: "reset", class: "btn-outline-secondary" %>
 
 <% end %>
 </div>
