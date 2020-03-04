@@ -13,6 +13,7 @@
   display: flex;
   margin: 16px;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   p {
     font-size: 12px;
@@ -21,7 +22,8 @@
 
   }
   img {
-    width: 40px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     object-fit: cover;
   }
