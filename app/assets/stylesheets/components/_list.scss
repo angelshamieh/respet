@@ -31,7 +31,6 @@
 
 
 .curved-yellow-banner {
-
   h3 {
   text-align: center;
   font-size:25px;
@@ -86,8 +85,8 @@ a.add-button{
 }
 
 .search-form-inline{
-  width:320px;
-  margin-left: 32px;
+  width: 320px;
+  margin: 0 auto;
 
   input[type=text] {
     border-radius: 16px !important;
@@ -98,6 +97,10 @@ a.add-button{
     right: 0;
     border-radius: 16px;
 
+  }
+  p {
+    margin-top: 8px;
+    // margin-bottom: 0;
   }
 }
 
@@ -151,7 +154,6 @@ a.add-button{
 .filter-by-pet-header{
   font-size: 16px;
   margin-bottom: 8px;
-  margin-left: 36px;
 }
 
 
@@ -169,8 +171,8 @@ a.add-button{
 }
 
 .lost-found-button{
-  margin-left: 100px;
-  margin-bottom: 32px;
+  margin: 0 auto;
+  margin-bottom: 16px;
   display: flex;
   background-color: white;
   justify-content: space-between;

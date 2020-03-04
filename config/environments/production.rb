@@ -44,8 +44,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = ''
-  config.action_cable.url = 'ws://respet.online/cable'
-  config.action_cable.allowed_request_origins = [ "http://www.respet.online", "https://www.respet.online" ]
+  # config.action_cable.url = 'ws://www.respet.online/cable'
+  # config.action_cable.allowed_request_origins = [ "http://www.respet.online", "https://www.respet.online" ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
