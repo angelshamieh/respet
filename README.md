@@ -4,7 +4,7 @@
 ![](https://res.cloudinary.com/degqxezsx/image/upload/v1603965169/Screen_Shot_2020-10-29_at_10.40.38_n1u3mu.png)
 </p>
 
-Respet is the application Animals in need.
+Respet is web application for animals in need.
 
 View it live: (https://http://www.respet.online//)
 
