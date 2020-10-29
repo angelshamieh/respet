@@ -2,7 +2,6 @@
 
 <p align="center">
     <img src="./app/assets/images/1.png" width="500" alt="landing page" />
-§![](https://res.cloudinary.com/degqxezsx/image/upload/v1603965169/Screen_Shot_2020-10-29_at_10.40.38_n1u3mu.png)
 </p>
 
 Respet is web application for animals in need.
@@ -10,16 +9,15 @@ Respet is web application for animals in need.
 View it live: (https://http://www.respet.online//)
 
 <p align="center">
-  ![](https://res.cloudinary.com/degqxezsx/image/upload/v1603965185/Screen_Shot_2020-10-29_at_10.44.33_t8djqz.png)
+ <img src="./app/assets/images/2.png" width="500" alt="landing page" />
 </p>
 
 <p align="center">
-  ![](https://res.cloudinary.com/degqxezsx/image/upload/v1603965174/Screen_Shot_2020-10-29_at_10.44.12_kcwnsd.png)
+  <img src="./app/assets/images/3.png" width="500" alt="landing page" />
 </p>
 
 <p align="center">
-  ![](https://res.cloudinary.com/degqxezsx/image/upload/v1603965180/Screen_Shot_2020-10-29_at_10.44.23_m5l1cn.png)
-</p>
+<img src="./app/assets/images/4.png" width="500" alt="landing page" /></p>
 
 This was our final project for Le Wagon's 9-week Full-stack coding Bootcamp batch 342 in Tel Aviv.
 
