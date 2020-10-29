@@ -1,7 +1,7 @@
 # Respet
 
 <p align="center">
-    <img src="./app/assets/images/1.png" width="500" height="500" alt="landing page" />
+    <img src="./app/assets/images/1.png" width="400" height="500" alt="landing page" />
 </p>
 
 Respet is web application for animals in need.
@@ -9,15 +9,15 @@ Respet is web application for animals in need.
 View it live: (https://http://www.respet.online//)
 
 <p align="center">
- <img src="./app/assets/images/2.png" width="500" height="500" alt="landing page" />
+ <img src="./app/assets/images/2.png" width="400" height="500" alt="landing page" />
 </p>
 
 <p align="center">
-  <img src="./app/assets/images/3.png" width="500" height="500" alt="landing page" />
+  <img src="./app/assets/images/3.png" width="400" height="500" alt="landing page" />
 </p>
 
 <p align="center">
-<img src="./app/assets/images/4.png" width="500" height="500" alt="landing page" /></p>
+<img src="./app/assets/images/4.png" width="400" height="500" alt="landing page" /></p>
 
 This was our final project for Le Wagon's 9-week Full-stack coding Bootcamp batch 342 in Tel Aviv.
 
