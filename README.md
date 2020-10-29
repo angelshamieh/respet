@@ -1,4 +1,4 @@
-# Respet
+# #Respet
 
 <p align="center">
     <img src="./app/assets/images/1.png" width="400" height="500" alt="landing page" />
@@ -22,7 +22,7 @@ View it live: (https://http://www.respet.online//)
 This was our final project for Le Wagon's 9-week Full-stack coding Bootcamp batch 342 in Tel Aviv.
 
 
-# Technology Used
+# #Technology Used
 ![Ruby](https://img.shields.io/badge/Ruby-language-blue.svg)
 ![Javascript](https://img.shields.io/badge/Javascript-language-blue.svg)
 ![Html](https://img.shields.io/badge/HTML-language-blue.svg)
@@ -32,7 +32,7 @@ This was our final project for Le Wagon's 9-week Full-stack coding Bootcamp batc
 ![Heroku](https://img.shields.io/badge/Heroku-host-green.svg)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-database-yellow.svg)
 
-# Our team
+# #Our team
     Angel Shamieh
 
     Charlotte Lui
