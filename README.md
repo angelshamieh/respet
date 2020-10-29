@@ -1,7 +1,7 @@
 # Respet
 
 <p align="center">
-    <img src="./app/assets/images/Screen Shot 2020-10-29 at 10.40.38.png.png" width="500" alt="landing page" />
+    <img src="./app/assets/images/1.png" width="500" alt="landing page" />
 §![](https://res.cloudinary.com/degqxezsx/image/upload/v1603965169/Screen_Shot_2020-10-29_at_10.40.38_n1u3mu.png)
 </p>
 
